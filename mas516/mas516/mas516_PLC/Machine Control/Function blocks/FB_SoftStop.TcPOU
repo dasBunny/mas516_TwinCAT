@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_SoftStop" Id="{8ee418a4-cae3-49ba-96a9-1ad2516d590a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_SoftStop
+VAR_INPUT
+	fPosition	 		: LREAL;
+	fNormalizedInput 	: LREAL;
+	stSoftstop 			: ST_SoftStop;
+END_VAR
+VAR_OUTPUT
+	bSoftStopActive : BOOL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT(stSoftstop.bEnable) THEN
+	bSoftStopActive := FALSE;
+ELSE
+	IF fPosition > stSoftstop.fPosStop AND fNormalizedInput > 0 THEN
+		bSoftStopActive := TRUE;
+	ELSIF fPosition < stSoftstop.fNegStop AND fNormalizedInput < 0 THEN
+		bSoftStopActive := TRUE;
+	ELSE
+		bSoftStopActive := FALSE;
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="FB_SoftStop">
+      <LineId Id="9" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="21" Count="3" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

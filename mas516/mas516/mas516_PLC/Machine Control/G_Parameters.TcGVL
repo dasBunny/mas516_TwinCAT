@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <GVL Name="G_Parameters" Id="{295e633e-08d5-4bd4-b4f1-5e6cf87cc055}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	fCyclicTime 					: LREAL := 0.001; // [s]
+	fMaxCylVelocityLimit 			: LREAL := 0.005; // [m/s]
+	fMaxWinchVelocityLimit 			: LREAL := 0.005; // [rad/s]
+	stWinchValveDeadBand 			: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 19660.0, fNegMin := 19660.0, fNegMax := 9830.0);
+	stCylValveDeadBand 				: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 19660.0, fNegMin := 19660.0, fNegMax := 9830.0);
+	stPressureSensorScaling 		: ST_AnalogInputScaling := (fMaxInputValue := 32767.0, fMinInputValue := 0.0, fMaxOutputValue := 400.0, fMinOutputValue := 0.0);
+	stCylPistonPositionScaling 		: ST_AnalogInputScaling := (fMaxInputValue := 32767.0, fMinInputValue := 0.0, fMaxOutputValue := 0.5, fMinOutputValue := 0.0);
+	stJoystickInputScaling 			: ST_JoystickInputScaling := (fMaxInputValue := 14746.0, fMinInputValue := 1617.0, fNeutralInputValue := 8160.0, fNeutralDeadband := 0.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
+	fEncoderOffset 					: LREAL := 0.0; // Encoder value at zero
+	fWinchDrumRadius				: LREAL := 0.0; // [m]
+	stWinchSoftStop 				: ST_SoftStop := (bEnable := FALSE, fPosStop := 0.0, fNegStop := 0.0);
+	stCylSoftStop 					: ST_SoftStop := (bEnable := FALSE, fPosStop := 0.0, fNegStop := 0.0);
+END_VAR
+
+
+]]></Declaration>
+  </GVL>
+</TcPlcObject>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="P_MachineControl" Id="{a90e0789-57c0-407b-b2f1-afc96a165b42}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_MachineControl
+VAR
+	fbWinchValveOutput 		: FB_ValveOutput;
+	fbCylValveOutput 		: FB_ValveOutput;
+	fbWinchSoftStop  		: FB_SoftStop;
+	fbCylSoftStop  			: FB_SoftStop;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[G_Inputs.bManualModeSelector := G_Work.bManualMode;
+
+fbWinchSoftStop(
+fNormalizedInput := G_Sensors.fJoystickNormalizedY,
+stSoftstop := G_Parameters.stWinchSoftStop,
+bSoftStopActive => G_Work.bWinchSoftStopActive
+);
+
+fbWinchValveOutput(
+	bEnable := (G_Work.bManualMode AND G_Inputs.bJoystickEnable AND NOT(fbWinchSoftStop.bSoftStopActive)),
+	stValveDeadBand := G_Parameters.stWinchValveDeadBand,
+	fNormalizedInput := G_Sensors.fJoystickNormalizedY,
+	bEnableValveOutput => G_Outputs.stWinchValveOutput.bEnable,
+	nOutput => G_Outputs.stWinchValveOutput.nValveOutput
+);
+
+fbCylSoftStop(
+fNormalizedInput := G_Sensors.fJoystickNormalizedX,
+stSoftstop := G_Parameters.stCylSoftStop,
+bSoftStopActive => G_Work.bCylSoftStopActive
+);
+
+fbCylValveOutput(
+	bEnable := (G_Work.bManualMode AND G_Inputs.bJoystickEnable AND NOT(fbCylSoftStop.bSoftStopActive)),
+	stValveDeadBand := G_Parameters.stCylValveDeadBand,
+	fNormalizedInput := G_Sensors.fJoystickNormalizedX,
+	bEnableValveOutput => G_Outputs.stCylValveOutput.bEnable,
+	nOutput => G_Outputs.stCylValveOutput.nValveOutput
+);
+
+ ]]></ST>
+    </Implementation>
+    <LineIds Name="P_MachineControl">
+      <LineId Id="5" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="35" Count="2" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="10" Count="7" />
+      <LineId Id="43" Count="4" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="18" Count="6" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="38" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
