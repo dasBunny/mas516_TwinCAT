@@ -26,6 +26,9 @@
     <Compile Include="Inputs\Function blocks\FB_JoystickInputScaling.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Inputs\Functions\F_DegToRad.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Inputs\G_Inputs.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
@@ -89,6 +92,7 @@
   <ItemGroup>
     <Folder Include="Inputs" />
     <Folder Include="Inputs\Function blocks" />
+    <Folder Include="Inputs\Functions" />
     <Folder Include="Inputs\Struct" />
     <Folder Include="Machine Control" />
     <Folder Include="Machine Control\Function blocks" />

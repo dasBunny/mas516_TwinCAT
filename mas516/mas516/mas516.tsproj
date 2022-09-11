@@ -163,7 +163,7 @@
 		<ImageData Id="1005">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e00000001001800000000000000000074120000741200000000000000000000fffffffffffffffffff7f7f7f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa2a2a2a2a2a2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf808080808080fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfb808080828282808080edededfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f3b4b4b4808080828282c0c0c0f4f4f4fffffffffffffffffffffffffffffff3f3f3ffffffffffffffffffffffffc0c0c08a8a8a808080b2b2b28080808080808383838686868a8a8a8d8d8d8080809e9e9effffffffffffffffffffffffcececebcbcbcb8b8b8a8a8a88787878b8b8b8e8e8e929292959595999999b8b8b8b8b8b8d6d6d6ffffffffffffffffffc0c0c0dcdcdcf7f7f79e9e9e9393939696969a9a9a9d9d9da1a1a1a4a4a4f7f7f7dcdcdc808080ffffffffffffffffffaaaaaa9494949494949595959f9f9fa2a2a2a6a6a6a9a9a9adadadb0b0b0949494aaaaaa969696d4d4d4d3d3d3ffffffa0a0a08080808c8c8c959595aaaaaaaeaeaeb1b1b1b5b5b5b8b8b8bcbcbc8c8c8cc4c4c4868686cacacae5e5e5ffffffdededeccccccdededec5c5c5b6b6b6b9b9b9bdbdbdc1c1c1c4c4c4c8c8c8dededec4c4c4909090ffffffffffffffffffebebebd4d4d4edededd8d8d8c2c2c2c5c5c5c9c9c9ccccccd0d0d0d3d3d3ededed989898bababaffffffffffffffffffd2d2d2929292888888cacacacdcdcdd1d1d1d4d4d4d8d8d8dbdbdbdfdfdf888888989898f7f7f7fffffffffffffffffffbfbfbbcbcbcc6c6c6d8d8d8d9d9d9dddddde0e0e0e4e4e4e7e7e7ebebebc6c6c6f3f3f3ffffffffffffffffffffffff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" Target64Bit="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" TargetNetId="5.80.90.242.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
@@ -173,20 +173,17 @@
 		</System>
 		<Plc>
 			<Project GUID="{49FED982-BC8A-4BF0-A28B-25164CD2DF05}" Name="mas516_PLC" PrjFilePath="mas516_PLC\mas516_PLC.plcproj" TmcFilePath="mas516_PLC\mas516_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{EF4E267C-E4CB-B956-0FA3-7E1C3CA1E194}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{AE778085-C550-FC2F-FEC7-F33FA64F4966}">
 					<Name>mas516_PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>G_Inputs.bAutoModeSelector</Name>
-							<Comment><![CDATA[ PLC Rack
- RIO Rack
- Digital Inputs]]></Comment>
+							<Name>G_Inputs.bManualModeSelector</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.bManualModeSelector</Name>
+							<Name>G_Inputs.bAutoModeSelector</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -195,6 +192,10 @@
 						</Var>
 						<Var>
 							<Name>G_Inputs.bStopButton</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>G_Inputs.bJoystickEnable</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -214,6 +215,18 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>G_Inputs.stPositionCylPiston.stStatus</Name>
+							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
+						</Var>
+						<Var>
+							<Name>G_Inputs.stPositionCylPiston.nValue</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>G_Inputs.nEncoderValue</Name>
+							<Type>UDINT</Type>
+						</Var>
+						<Var>
 							<Name>G_Inputs.stPressureSupply.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
@@ -230,51 +243,51 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylPistonSide.stStatus</Name>
+							<Name>G_Inputs.stPressureCyl_A_PistonSide.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylPistonSide.nValue</Name>
+							<Name>G_Inputs.stPressureCyl_A_PistonSide.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylLhvSide.stStatus</Name>
+							<Name>G_Inputs.stPressureCyl_B_RodSide.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylLhvSide.nValue</Name>
+							<Name>G_Inputs.stPressureCyl_B_RodSide.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylRodSide.stStatus</Name>
+							<Name>G_Inputs.stPressureWinch_A_Input.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureCylRodSide.nValue</Name>
+							<Name>G_Inputs.stPressureWinch_A_Input.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchInput.stStatus</Name>
+							<Name>G_Inputs.stPressureWinch_A1_Input.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchInput.nValue</Name>
+							<Name>G_Inputs.stPressureWinch_A1_Input.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchLhvSide.stStatus</Name>
+							<Name>G_Inputs.stPressureWinch_B_Output.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchLhvSide.nValue</Name>
+							<Name>G_Inputs.stPressureWinch_B_Output.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchOutput.stStatus</Name>
+							<Name>G_Inputs.stPressureWinch_B1_Output.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinchOutput.nValue</Name>
+							<Name>G_Inputs.stPressureWinch_B1_Output.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -292,22 +305,6 @@
 						<Var>
 							<Name>G_Inputs.stFlowWinch.nValue</Name>
 							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>G_Inputs.bJoystickEnable</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>G_Inputs.stPositionCylPiston.stStatus</Name>
-							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
-						</Var>
-						<Var>
-							<Name>G_Inputs.stPositionCylPiston.nValue</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>G_Inputs.nEncoderValue</Name>
-							<Type>UDINT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -371,6 +368,14 @@
 							</OwnerB>
 						</OwnerA>
 					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2022-09-11T16:53:24">
+						<OwnerA Name="InputDst" Prefix="TIPC^mas516_PLC^mas516_PLC Instance" Type="1">
+							<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^DI (EL1008)">
+								<Link VarA="G_Inputs.bAutoSelector" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" Size="1" RestoreInfo="ANotFound"/>
+								<Link VarA="G_Inputs.bManualSelector" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" Size="1" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
 					<Contexts>
 						<Context>
 							<Id NeedCalleeCall="true">0</Id>
@@ -389,7 +394,7 @@
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="3" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
+			<Device Id="3" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
 				<Name>Device 3 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
@@ -406,7 +411,7 @@
 					<ImageId>1000</ImageId>
 					<EtherCAT SlaveType="1" PdiType="#x0d00" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x044c2c52" RevisionNo="#x00120000" PortPhys="305" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1100 EtherCAT Coupler (2A E-Bus)" Desc="EK1100" PortABoxInfo="#x00ffffff"/>
 					<Box Id="2" BoxType="9099">
-						<Name>Term 2 (EL1008)</Name>
+						<Name>DI (EL1008)</Name>
 						<ImageId>7</ImageId>
 						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03f03052" RevisionNo="#x00120000" RepeatSupport="true" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1008 8Ch. Dig. Input 24V, 3ms" Desc="EL1008" PortABoxInfo="#x01000001">
 							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
@@ -1122,6 +1127,26 @@
 					<Box Id="6" BoxType="9099" BoxFlags="#x00000020">
 						<Name>Term 6 (EL3174)</Name>
 						<ImageId>1002</ImageId>
+						<Xml>
+							<BeckhoffEcatSlavePlugIn>
+								<Channel>
+									<ChannelNo>0</ChannelNo>
+									<Data>01000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000000010000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>1</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>2</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+								<Channel>
+									<ChannelNo>3</ChannelNo>
+									<Data>01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Data>
+								</Channel>
+							</BeckhoffEcatSlavePlugIn>
+						</Xml>
 						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="7" FoeType="1" VendorId="#x00000002" ProductCode="#x0c663052" RevisionNo="#x00100000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL3174 4Ch. Ana. Input +/-10V Diff., +/-20mA SingleEnded, 16 Bit" Desc="EL3174" PortABoxInfo="#x01000005">
 							<SyncMan>001080002600010001000000800080008000001026010000</SyncMan>
 							<SyncMan>801080002200010002000000800080008000801022010000</SyncMan>
@@ -1132,199 +1157,207 @@
 							<BootStrapData>0010f400f410f400</BootStrapData>
 							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
 							<DcMode>4443494e00000000000000000000000044432d53796e6368726f6e2028696e7075742062617365642900000000000000000000006079feffa8610000000000070100000000000000000001000000000000000000000000000000000000000000</DcMode>
+							<MBoxUserCmdData>020003001a000000000000000000000000000000000000000000000000000000300080011200000000040000000001000000000000000000004000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001e000000000000000000000000000000000000000000000000000000300d80011600000000001200000000000000000000000080ffffff7f000000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001a000000000000000000000000000000000000000000000000000000301080011200000000040000000001000000000000000000004000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001e000000000000000000000000000000000000000000000000000000301d8001160000000000020000000000000000000000000000000000000000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001a000000000000000000000000000000000000000000000000000000302080011200000000040000000001000000000000000000004000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001e000000000000000000000000000000000000000000000000000000302d80011600000000000200000000000000000000000080ffffff7f000000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001a000000000000000000000000000000000000000000000000000000303080011200000000040000000001000000000000000000004000</MBoxUserCmdData>
+							<MBoxUserCmdData>020003001e000000000000000000000000000000000000000000000000000000303d8001160000000000020000000000000000000000000000000000000000</MBoxUserCmdData>
 							<Pdo Name="AI Standard Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a01</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6000" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6000" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6000" Sub="#x02">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6000" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6000" Sub="#x03">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit1
 Bit1: Value smaller than Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6000" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6000" Sub="#x05">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit2
 Bit1: Value smaller than Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6000" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6000" Sub="#x07">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="5">
 									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__Sync error" Index="#x6000" Sub="#x0e">
+								<Entry Name="Status__Sync error" BitLen="1" Index="#x6000" Sub="#x0e">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6000" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6000" Sub="#x0f">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6000" Sub="#x10">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Value" Index="#x6000" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6000" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 1" Index="#x1a01" Flags="#x0010">
 								<ExcludePdo>#x1a00</ExcludePdo>
-								<Entry Name="Value" Index="#x6000" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6000" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a03</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6010" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6010" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6010" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6010" Sub="#x02">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6010" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6010" Sub="#x03">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit1
 Bit1: Value smaller than Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6010" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6010" Sub="#x05">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit2
 Bit1: Value smaller than Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6010" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6010" Sub="#x07">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="5">
 									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__Sync error" Index="#x6010" Sub="#x0e">
+								<Entry Name="Status__Sync error" BitLen="1" Index="#x6010" Sub="#x0e">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6010" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6010" Sub="#x0f">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6010" Sub="#x10">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Value" Index="#x6010" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6010" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 2" Index="#x1a03" Flags="#x0010">
 								<ExcludePdo>#x1a02</ExcludePdo>
-								<Entry Name="Value" Index="#x6010" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6010" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 3" Index="#x1a04" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a05</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6020" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6020" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6020" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6020" Sub="#x02">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6020" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6020" Sub="#x03">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit1
 Bit1: Value smaller than Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6020" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6020" Sub="#x05">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit2
 Bit1: Value smaller than Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6020" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6020" Sub="#x07">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="5">
 									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__Sync error" Index="#x6020" Sub="#x0e">
+								<Entry Name="Status__Sync error" BitLen="1" Index="#x6020" Sub="#x0e">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6020" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6020" Sub="#x0f">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6020" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6020" Sub="#x10">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Value" Index="#x6020" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6020" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 3" Index="#x1a05" Flags="#x0010">
 								<ExcludePdo>#x1a04</ExcludePdo>
-								<Entry Name="Value" Index="#x6020" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6020" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Standard Channel 4" Index="#x1a06" Flags="#x0010" SyncMan="3">
 								<ExcludePdo>#x1a07</ExcludePdo>
-								<Entry Name="Status__Underrange" Index="#x6030" Sub="#x01">
+								<Entry Name="Status__Underrange" BitLen="1" Index="#x6030" Sub="#x01">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when upper value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Overrange" Index="#x6030" Sub="#x02">
+								<Entry Name="Status__Overrange" BitLen="1" Index="#x6030" Sub="#x02">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when lower value limit exceeded]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 1" Index="#x6030" Sub="#x03">
+								<Entry Name="Status__Limit 1" BitLen="2" Index="#x6030" Sub="#x03">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit1
 Bit1: Value smaller than Limit1]]></Comment>
 								</Entry>
-								<Entry Name="Status__Limit 2" Index="#x6030" Sub="#x05">
+								<Entry Name="Status__Limit 2" BitLen="2" Index="#x6030" Sub="#x05">
 									<Type>BIT2</Type>
 									<Comment><![CDATA[Bit0: Value greater than Limit2
 Bit1: Value smaller than Limit2]]></Comment>
 								</Entry>
-								<Entry Name="Status__Error" Index="#x6030" Sub="#x07">
+								<Entry Name="Status__Error" BitLen="1" Index="#x6030" Sub="#x07">
 									<Type>BIT</Type>
 									<Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="1">
 									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__">
+								<Entry Name="Status__" BitLen="5">
 									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
 								</Entry>
-								<Entry Name="Status__Sync error" Index="#x6030" Sub="#x0e">
+								<Entry Name="Status__Sync error" BitLen="1" Index="#x6030" Sub="#x0e">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO State" Index="#x6030" Sub="#x0f">
+								<Entry Name="Status__TxPDO State" BitLen="1" Index="#x6030" Sub="#x0f">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Status__TxPDO Toggle" Index="#x6030" Sub="#x10">
+								<Entry Name="Status__TxPDO Toggle" BitLen="1" Index="#x6030" Sub="#x10">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="Value" Index="#x6030" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6030" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="AI Compact Channel 4" Index="#x1a07" Flags="#x0010">
 								<ExcludePdo>#x1a06</ExcludePdo>
-								<Entry Name="Value" Index="#x6030" Sub="#x11">
+								<Entry Name="Value" BitLen="16" Index="#x6030" Sub="#x11">
 									<Type>INT</Type>
 								</Entry>
 							</Pdo>
@@ -1636,11 +1669,11 @@ Bit1: Value smaller than Limit2]]></Comment>
 					<Box Id="9" BoxType="9094" BoxFlags="#x00000020">
 						<Name>Term 9 (EL6751)</Name>
 						<ImageId>1004</ImageId>
-						<EtherCAT SlaveType="5" AdsServerAddress="8027c8b8040a0000" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
+						<EtherCAT SlaveType="5" AdsServerAddress="8027c8b802010000" FixedAdsServerNetId="true" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" OwnAddrExtern="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
 							<SyncMan>001000042600010001000000500000040004001026010000</SyncMan>
 							<SyncMan>001400042200010002000000500000040004001422010000</SyncMan>
 							<SyncMan>001800002600000003000000000000000000001826010000</SyncMan>
-							<SyncMan>002402002200010004000000000000000000002422010000</SyncMan>
+							<SyncMan>002406002200010004000000000000000000002422010000</SyncMan>
 							<Fmmu>0000000000000000000000020000000001000000000000000000000000000000</Fmmu>
 							<Fmmu>0000000000000000002400010100000002000000000000000000000000000000</Fmmu>
 							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -1648,11 +1681,20 @@ Bit1: Value smaller than Limit2]]></Comment>
 							<SuName>Term 9 (EL6751)</SuName>
 							<DcMode>53796e6368726f6e0000000000000000534d2d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
 							<DcMode>444353594e430000000000000000000044432d53796e6368726f6e000000000000000000000000000000000000000000000000000000000090d00300000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
-							<Pdo Name="Device" Index="#x1a80" Flags="#x0011" SyncMan="3">
-								<Entry Name="Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
+							<Pdo Name="Device 1 (EL6751)" Index="#x1a80" Flags="#x0011" SyncMan="3">
+								<Entry Name="Device 1 (EL6751)_Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
 									<Type>USINT</Type>
 								</Entry>
-								<Entry Name="DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
+								<Entry Name="Device 1 (EL6751)_CanState" Index="#xf100" Sub="#x03" Flags="#x00000100">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="Device 1 (EL6751)_RxErrorCounter" Index="#xf100" Sub="#x05" Flags="#x00000100">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Device 1 (EL6751)_TxErrorCounter" Index="#xf100" Sub="#x04" Flags="#x00000100">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Device 1 (EL6751)_DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -1694,7 +1736,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 				</Box>
 				<EtherCAT/>
 			</Device>
-			<Device Id="1" Disabled="true" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
+			<Device Id="1" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
 				<Name>Device 1 (EL6751)</Name>
 				<AddressInfo>
 					<Ecat>
@@ -1716,4 +1758,63 @@ Bit1: Value smaller than Limit2]]></Comment>
 			</Device>
 		</Io>
 	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
+		<OwnerA Name="TIPC^mas516_PLC^mas516_PLC Instance">
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Box 10 (Fraba EtherCAT)">
+				<Link VarA="PlcTask Inputs^G_Inputs.nEncoderValue" VarB="Encoder^Position Value"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^DI (EL1008)">
+				<Link VarA="PlcTask Inputs^G_Inputs.bAutoModeSelector" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.bJoystickEnable" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.bManualModeSelector" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.bStartButton" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.bStopButton" VarB="Channel 4^Input"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2008)">
+				<Link VarA="PlcTask Outputs^G_Outputs.bGreenLight" VarB="Channel 1^Output"/>
+				<Link VarA="PlcTask Outputs^G_Outputs.bRedLight" VarB="Channel 2^Output"/>
+				<Link VarA="PlcTask Outputs^G_Outputs.stCylValveOutput.bEnable" VarB="Channel 4^Output"/>
+				<Link VarA="PlcTask Outputs^G_Outputs.stWinchValveOutput.bEnable" VarB="Channel 3^Output"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 4 (EL3068)">
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureCyl_A_PistonSide.nValue" VarB="AI Standard Channel 4^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureCyl_A_PistonSide.stStatus" VarB="AI Standard Channel 4^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureCyl_B_RodSide.nValue" VarB="AI Standard Channel 3^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureCyl_B_RodSide.stStatus" VarB="AI Standard Channel 3^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureReturn.nValue" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureReturn.stStatus" VarB="AI Standard Channel 2^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureSupply.nValue" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureSupply.stStatus" VarB="AI Standard Channel 1^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_A1_Input.nValue" VarB="AI Standard Channel 5^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_A1_Input.stStatus" VarB="AI Standard Channel 5^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_A_Input.nValue" VarB="AI Standard Channel 7^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_A_Input.stStatus" VarB="AI Standard Channel 7^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_B1_Output.nValue" VarB="AI Standard Channel 6^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_B1_Output.stStatus" VarB="AI Standard Channel 6^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_B_Output.nValue" VarB="AI Standard Channel 8^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinch_B_Output.stStatus" VarB="AI Standard Channel 8^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 5 (EL3068)">
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinchDrain.nValue" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPressureWinchDrain.stStatus" VarB="AI Standard Channel 1^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 6 (EL3174)">
+				<Link VarA="PlcTask Inputs^G_Inputs.stFlowWinch.nValue" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stFlowWinch.stStatus" VarB="AI Standard Channel 1^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 7 (EL3255)">
+				<Link VarA="PlcTask Inputs^G_Inputs.stJoyX.nValue" VarB="AI Standard Channel 2^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stJoyX.stStatus" VarB="AI Standard Channel 2^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stJoyY.nValue" VarB="AI Standard Channel 3^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stJoyY.stStatus" VarB="AI Standard Channel 3^Status"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPositionCylPiston.nValue" VarB="AI Standard Channel 1^Value"/>
+				<Link VarA="PlcTask Inputs^G_Inputs.stPositionCylPiston.stStatus" VarB="AI Standard Channel 1^Status"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 3 (EtherCAT)^Term 1 (EK1100)^Term 8 (EL4104)">
+				<Link VarA="PlcTask Outputs^G_Outputs.stCylValveOutput.nValveOutput" VarB="AO Output Channel 2^Analog output"/>
+				<Link VarA="PlcTask Outputs^G_Outputs.stWinchValveOutput.nValveOutput" VarB="AO Output Channel 1^Analog output"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
 </TcSmProject>

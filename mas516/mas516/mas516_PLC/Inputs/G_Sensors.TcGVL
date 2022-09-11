@@ -3,23 +3,24 @@
   <GVL Name="G_Sensors" Id="{d28c946e-63b0-41ab-8fee-be9b6a0df66e}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-	fJoystickNormalizedY 	: LREAL;
-	fJoystickNormalizedX 	: LREAL;
-	fPositionCylPiston  	: LREAL;
+	fJoystickNormalizedY 		: LREAL;
+	fJoystickNormalizedX 		: LREAL;
+	fPositionCylPiston  		: LREAL;
 	// HPU Interface
-	fPressureSupply 		: LREAL;
-	fPressureReturn 		: LREAL;
+	fPressureSupply 			: LREAL;
+	fPressureReturn 			: LREAL;
 	// Cylinder
-	fPressureCylPistonSide 	: LREAL;
-	fPressureCylLhvSide 	: LREAL;
-	fPressureCylRodSide		: LREAL;
+	fPressureCyl_A_PistonSide 	: LREAL;
+	fPressureCyl_B_RodSide		: LREAL;
 	// Winch
-	fPressureWinchInput 	: LREAL;
-	fPressureWinchLhvSide 	: LREAL;
-	fPressureWinchOutput	: LREAL;
-	fPressureWinchDrain		: LREAL;
-	fWinchEncoderPosition 	: LREAL;
-	fWinchWirePosition 		: LREAL;
+	fPressureWinch_A_Input 		: LREAL;
+	fPressureWinch_A1_Side 		: LREAL;
+	fPressureWinch_B_Output		: LREAL;
+	fPressureWinch_B1_Output	: LREAL;
+	fPressureWinchDrain			: LREAL;
+	fWinchEncoderPosition 		: LREAL;
+	fWinchWirePosition 			: LREAL;
+	fWinchFlow 					: LREAL;	// [L/min]
 END_VAR
 
 ]]></Declaration>

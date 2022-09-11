@@ -3,12 +3,8 @@
   <GVL Name="G_Inputs" Id="{9388cc7f-fbee-4109-83e3-d27f0f401106}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-	// PLC Rack
-
-	// RIO Rack
-	// Digital Inputs
-	bAutoModeSelector			AT %I* : BOOL;
 	bManualModeSelector			AT %I* : BOOL;
+	bAutoModeSelector			AT %I* : BOOL;
 	bStartButton				AT %I* : BOOL;
 	bStopButton					AT %I* : BOOL;
 	bJoystickEnable				AT %I* : BOOL;
@@ -24,13 +20,13 @@ VAR_GLOBAL
 	stPressureSupply 			: ST_AnalogInput;
 	stPressureReturn 			: ST_AnalogInput;
 	// Cylinder
-	stPressureCylPistonSide 	: ST_AnalogInput;
-	stPressureCylLhvSide 		: ST_AnalogInput;
-	stPressureCylRodSide		: ST_AnalogInput;
+	stPressureCyl_A_PistonSide 	: ST_AnalogInput;
+	stPressureCyl_B_RodSide		: ST_AnalogInput;
 	// Winch
-	stPressureWinchInput 		: ST_AnalogInput;
-	stPressureWinchLhvSide 		: ST_AnalogInput;
-	stPressureWinchOutput		: ST_AnalogInput;
+	stPressureWinch_A_Input 	: ST_AnalogInput;
+	stPressureWinch_A1_Input 	: ST_AnalogInput;
+	stPressureWinch_B_Output	: ST_AnalogInput;
+	stPressureWinch_B1_Output	: ST_AnalogInput;
 	stPressureWinchDrain		: ST_AnalogInput;
 	
 	// Analog Inputs 3 (Multi)

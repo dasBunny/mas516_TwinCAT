@@ -40,7 +40,7 @@ END_IF
 nCount := nInput + nRounds*nMaxValue30bit;
 
 //Position Output
-fPosition := DINT_TO_LREAL(nCount)*fScale16bit - G_Parameters.fEncoderOffset;	]]></ST>
+fPosition := DINT_TO_LREAL(nCount)*fScale16bit - G_Parameters.fEncoderOffset; // [deg]]]></ST>
     </Implementation>
     <LineIds Name="FB_Encoder">
       <LineId Id="31" Count="0" />
