@@ -173,7 +173,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{49FED982-BC8A-4BF0-A28B-25164CD2DF05}" Name="mas516_PLC" PrjFilePath="mas516_PLC\mas516_PLC.plcproj" TmcFilePath="mas516_PLC\mas516_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{AE778085-C550-FC2F-FEC7-F33FA64F4966}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{2B720390-3B5C-8C1A-7CEF-089A99E36D62}">
 					<Name>mas516_PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
