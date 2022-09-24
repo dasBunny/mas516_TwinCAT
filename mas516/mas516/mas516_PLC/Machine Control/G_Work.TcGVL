@@ -4,6 +4,11 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	bManualMode 			: BOOL;
+	bAutoMode 				: BOOL;
+	bWinchEnable 			: BOOL;
+	bCylEnable 				: BOOL;
+	fWinchControlInput 		: LREAL;
+	fCylControlInput 		: LREAL;
 	bWinchSoftStopActive 	: BOOL;
 	bCylSoftStopActive 		: BOOL; 
 END_VAR]]></Declaration>

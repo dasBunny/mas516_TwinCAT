@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_AutomaticControl" Id="{b543be1d-46f1-4ea5-ae35-9d7ea7728984}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_AutomaticControl
+VAR_INPUT
+	bEnable								: BOOL;
+	bStartMotion 						: BOOL;
+	bStopMotion 						: BOOL;
+	stValveOutputGeneratorSettings  	: ST_ValveOutputGeneratorSettings;
+END_VAR
+VAR_OUTPUT
+	fTime : LREAL;
+	fNormalizedValveOpeningRefSignal : LREAL;
+END_VAR
+VAR
+	fbClock 					: FB_Clock;	
+	fbValveOutputGenerator 		: FB_ValveOutputGenerator;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbClock(
+	bStart := bStartMotion,
+	bStop := bStopMotion,
+	fCycleTime := G_Parameters.fCyclicTime
+);
+
+fbValveOutputGenerator(
+	bEnable := bEnable,
+	stValveOutputGeneratorSettings := stValveOutputGeneratorSettings,
+	fClock_s := fbClock.fTime
+);
+
+fNormalizedValveOpeningRefSignal := fbValveOutputGenerator.fNormalizedValveOutputRef;
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_AutomaticControl">
+      <LineId Id="21" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="139" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="142" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -3,7 +3,7 @@
   <POU Name="P_Inputs" Id="{8b676dbd-393f-42d6-8803-330b6e90ab14}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM P_Inputs
 VAR
-	fbJoystickWinch 			: FB_JoystickInputScaling;
+	fbJoystickWinch 				: FB_JoystickInputScaling;
 	fbJoystickCyl 					: FB_JoystickInputScaling;
 	fbWinchPosition 				: FB_Encoder;
 	fbCylPistonPosition 			: FB_AnalogInputScaling;
@@ -16,7 +16,7 @@ VAR
 	fbPressureWinch_B_Output		: FB_AnalogInputScaling;
 	fbPressureWinch_B1_Output		: FB_AnalogInputScaling;
 	fbPressureWinchDrain			: FB_AnalogInputScaling;
-	fbFlowWinch						: FB_AnalogInputScaling;
+	fbFlowWinch						: FB_FlowMeterInputScaling;
 	
 	
 	
@@ -103,11 +103,11 @@ fbPressureWinchDrain(
 	fOutput => G_Sensors.fPressureWinchDrain
 );
 
-//fbFlowWinch(
-//	nRawInput := G_Inputs.stFlowWinch.nValue,
-//	stAnalogInputScaling := G_Parameters.stPressureSensorScaling40bar,
-//	fOutput => G_Sensors.fWinchFlow
-//);
+fbFlowWinch(
+	nRawInput := G_Inputs.stFlowWinch.nValue,
+	stFlowMeterInputScaling := G_Parameters.stFlowMeterInputScaling,
+	fNormalizedOutput => G_Sensors.fWinchFlow
+);
 ]]></ST>
     </Implementation>
     <LineIds Name="P_Inputs">
@@ -161,7 +161,9 @@ fbPressureWinchDrain(
       <LineId Id="121" Count="1" />
       <LineId Id="172" Count="0" />
       <LineId Id="123" Count="1" />
-      <LineId Id="203" Count="4" />
+      <LineId Id="203" Count="1" />
+      <LineId Id="228" Count="1" />
+      <LineId Id="207" Count="0" />
       <LineId Id="104" Count="0" />
       <LineId Id="38" Count="0" />
     </LineIds>

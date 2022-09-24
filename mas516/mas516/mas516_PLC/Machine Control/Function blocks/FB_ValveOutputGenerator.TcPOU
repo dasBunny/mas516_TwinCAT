@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_ValveOutputGenerator" Id="{3f66ef62-bb08-4df5-81cd-5b0edd527377}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ValveOutputGenerator
+VAR_INPUT
+	bEnable: BOOL;
+	stValveOutputGeneratorSettings : ST_ValveOutputGeneratorSettings;
+	fClock_s: LREAL;
+END_VAR
+VAR_OUTPUT
+	fNormalizedValveOutputRef: LREAL;
+	fTotalMotionTime_s: LREAL;
+END_VAR
+VAR
+	fInitialValveOpening: LREAL;
+	fValveOpeningSetPoint: LREAL;
+	fTimeBeforeStarting_s: LREAL;
+	fRampTime_s: LREAL;
+	fHoldTime_s: LREAL;
+	fWaitTime_s: LREAL;
+	slopeExt: LREAL;
+	slopeRetr: LREAL;
+	Error: DINT;
+	tmp: LREAL;
+	temp1: LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(* Outputs for Atomic SubSystem: '<Root>/FB_AutomaticValveOutputGenerator' *)
+(* Saturate: '<S1>/Saturation2' *)
+
+IF fValveOpeningSetPoint > 1.0 THEN 
+    fNormalizedValveOutputRef := 1.0;
+ELSIF fValveOpeningSetPoint >= 0.0 THEN 
+    fNormalizedValveOutputRef := fValveOpeningSetPoint;
+ELSE 
+    fNormalizedValveOutputRef := 0.0;
+END_IF;
+
+(* End of Saturate: '<S1>/Saturation2' *)
+
+
+(* MATLAB Function: '<S1>/AutomaticValveOutputGenerator' *)
+(* MATLAB Function 'FB_AutomaticValveOutputGenerator/AutomaticValveOutputGenerator': '<S2>:1' *)
+(* '<S2>:1:2' us=u_ref; *)
+(* '<S2>:1:3' slopeExt=u0-us; *)
+slopeExt := fInitialValveOpening - fNormalizedValveOutputRef;
+(* '<S2>:1:4' slopeRetr=-us-u0; *)
+slopeRetr := ( -fNormalizedValveOutputRef) - fInitialValveOpening;
+(* '<S2>:1:6' if tHold < 0 *)
+
+IF fHoldTime_s < 0.0 THEN 
+    (* '<S2>:1:7' Error = 1; *)
+    Error := 1;
+ELSE 
+    (* '<S2>:1:8' else *)
+    (* '<S2>:1:9' Error = 0; *)
+    Error := 0;
+END_IF;
+
+(* '<S2>:1:12' t1=tRamp; *)
+(* '<S2>:1:13' t2=tHold; *)
+(* '<S2>:1:14' t3=tRamp; *)
+(* '<S2>:1:15' t4=tWait; *)
+(* '<S2>:1:16' t5=t1; *)
+(* '<S2>:1:17' t6=t2; *)
+(* '<S2>:1:18' t7=t3; *)
+(* '<S2>:1:20' if Error == 1 *)
+
+IF Error = 1 THEN 
+    (* '<S2>:1:21' u = u0; *)
+    fNormalizedValveOutputRef := fInitialValveOpening;
+ELSIF (fClock_s >= 0.0) AND (fClock_s < fTimeBeforeStarting_s) THEN 
+    (* '<S2>:1:22' elseif t>=0 && t<t0 *)
+    (* '<S2>:1:23' u = u0; *)
+    fNormalizedValveOutputRef := fInitialValveOpening;
+ELSE 
+    tmp := fTimeBeforeStarting_s + fRampTime_s;
+
+    IF (fClock_s >= fTimeBeforeStarting_s) AND (fClock_s < tmp) THEN 
+        (* '<S2>:1:24' elseif t>=t0 && t<(t0+t1) *)
+        (* '<S2>:1:25' u = u0-(slopeExt/t1)*(t-t0); *)
+        fNormalizedValveOutputRef := fInitialValveOpening - ((slopeExt / fRampTime_s) * (fClock_s - fTimeBeforeStarting_s));
+    ELSE 
+        temp1 := tmp + fHoldTime_s;
+
+        IF (fClock_s < tmp) OR (fClock_s >= temp1) THEN 
+            tmp := temp1 + fRampTime_s;
+
+            IF (fClock_s >= temp1) AND (fClock_s < tmp) THEN 
+                (* '<S2>:1:28' elseif t>=(t0+t1+t2) && t<(t0+t1+t2+t3) *)
+                (* '<S2>:1:29' u = us+(slopeExt/t3)*(t-(t0+t1+t2)); *)
+                fNormalizedValveOutputRef := ((fClock_s - temp1) * (slopeExt / fRampTime_s)) + fNormalizedValveOutputRef;
+            ELSE 
+                temp1 := tmp + fWaitTime_s;
+
+                IF (fClock_s >= tmp) AND (fClock_s < temp1) THEN 
+                    (* '<S2>:1:30' elseif t>=(t0+t1+t2+t3) && t<(t0+t1+t2+t3+t4) *)
+                    (* '<S2>:1:31' u = u0; *)
+                    fNormalizedValveOutputRef := fInitialValveOpening;
+                ELSE 
+                    tmp := temp1 + fRampTime_s;
+
+                    IF (fClock_s >= temp1) AND (fClock_s < tmp) THEN 
+                        (* '<S2>:1:32' elseif t>=(t0+t1+t2+t3+t4) && t<(t0+t1+t2+t3+t4+t5) *)
+                        (* '<S2>:1:33' u = u0+(slopeRetr/t5)*(t-(t0+t1+t2+t3+t4)); *)
+                        fNormalizedValveOutputRef := ((fClock_s - temp1) * (slopeRetr / fRampTime_s)) + fInitialValveOpening;
+                    ELSE 
+                        temp1 := tmp + fHoldTime_s;
+
+                        IF (fClock_s >= tmp) AND (fClock_s < temp1) THEN 
+                            (* '<S2>:1:34' elseif t>=(t0+t1+t2+t3+t4+t5) && t<(t0+t1+t2+t3+t4+t5+t6) *)
+                            (* '<S2>:1:35' u = -us; *)
+                            fNormalizedValveOutputRef :=  -fNormalizedValveOutputRef;
+                        ELSIF (fClock_s >= temp1) AND (fClock_s < (temp1 + fRampTime_s)) THEN 
+                            (* '<S2>:1:36' elseif t>=(t0+t1+t2+t3+t4+t5+t6) && t<(t0+t1+t2+t3+t4+t5+t6+t7) *)
+                            (* '<S2>:1:37' u = -us-(slopeRetr/t3)*(t-(t0+t1+t2+t3+t4+t5+t6)); *)
+                            fNormalizedValveOutputRef := ( -fNormalizedValveOutputRef) - ((fClock_s - temp1) * (slopeRetr / fRampTime_s));
+                        ELSE 
+                            (* '<S2>:1:38' else *)
+                            (* '<S2>:1:39' u = u0; *)
+                            fNormalizedValveOutputRef := fInitialValveOpening;
+                        END_IF;
+
+                    END_IF;
+
+                END_IF;
+
+            END_IF;
+
+        END_IF;
+
+    END_IF;
+
+END_IF;
+
+(* Switch: '<S1>/Switch' *)
+(* '<S2>:1:42' T = t0+t1+t2+t3+t4+t5+t6+t7; *)
+
+IF  NOT bEnable THEN 
+    fNormalizedValveOutputRef := fInitialValveOpening;
+END_IF;
+
+(* End of Switch: '<S1>/Switch' *)
+
+
+(* Saturate: '<S1>/Saturation' *)
+
+IF fNormalizedValveOutputRef > 1.0 THEN 
+    (* Outport: '<Root>/fNormalizedValveOutputRef' *)
+    fNormalizedValveOutputRef := 1.0;
+ELSIF fNormalizedValveOutputRef < -1.0 THEN 
+    (* Outport: '<Root>/fNormalizedValveOutputRef' *)
+    fNormalizedValveOutputRef := -1.0;
+END_IF;
+
+(* End of Saturate: '<S1>/Saturation' *)
+
+
+(* Outport: '<Root>/fTotalMotionTime_s' incorporates:
+ *  MATLAB Function: '<S1>/AutomaticValveOutputGenerator' *)
+fTotalMotionTime_s := ((((((fTimeBeforeStarting_s + fRampTime_s) + fHoldTime_s) + fRampTime_s) + fWaitTime_s) + fRampTime_s) + fHoldTime_s) + fRampTime_s;
+(* End of Outputs for SubSystem: '<Root>/FB_AutomaticValveOutputGenerator' *)
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_ValveOutputGenerator">
+      <LineId Id="3" Count="136" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_ValveOutputGeneratorSettings" Id="{254965e6-b334-44fc-b79f-3e661039b245}">
+    <Declaration><![CDATA[TYPE ST_ValveOutputGeneratorSettings :
+STRUCT
+	fInitialValveOpening	:	LREAL;
+	fValveOpeningSetPoint	:	LREAL;
+	fTimeBeforeStarting_s	:	LREAL;
+	fRampTime_s				:	LREAL;
+	fHoldTime_s				:	LREAL;
+	fWaitTime_s				:	LREAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

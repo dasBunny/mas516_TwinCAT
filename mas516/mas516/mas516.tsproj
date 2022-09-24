@@ -166,7 +166,7 @@
 	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" TargetNetId="5.80.90.242.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
-				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+				<Task Id="3" Priority="20" CycleTime="10000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
 			</Tasks>
@@ -384,7 +384,7 @@
 								<OTCID>#x02010030</OTCID>
 							</ManualConfig>
 							<Priority>20</Priority>
-							<CycleTime>10000000</CycleTime>
+							<CycleTime>1000000</CycleTime>
 						</Context>
 					</Contexts>
 					<TaskPouOids>
@@ -394,7 +394,7 @@
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="3" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
+			<Device Id="3" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
 				<Name>Device 3 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
@@ -1669,11 +1669,11 @@ Bit1: Value smaller than Limit2]]></Comment>
 					<Box Id="9" BoxType="9094" BoxFlags="#x00000020">
 						<Name>Term 9 (EL6751)</Name>
 						<ImageId>1004</ImageId>
-						<EtherCAT SlaveType="5" AdsServerAddress="8027c8b802010000" FixedAdsServerNetId="true" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" OwnAddrExtern="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
+						<EtherCAT SlaveType="5" AdsServerAddress="05505af2040a0000" FixedAdsServerNetId="true" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
 							<SyncMan>001000042600010001000000500000040004001026010000</SyncMan>
 							<SyncMan>001400042200010002000000500000040004001422010000</SyncMan>
 							<SyncMan>001800002600000003000000000000000000001826010000</SyncMan>
-							<SyncMan>002406002200010004000000000000000000002422010000</SyncMan>
+							<SyncMan>002402002200010004000000000000000000002422010000</SyncMan>
 							<Fmmu>0000000000000000000000020000000001000000000000000000000000000000</Fmmu>
 							<Fmmu>0000000000000000002400010100000002000000000000000000000000000000</Fmmu>
 							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -1681,20 +1681,11 @@ Bit1: Value smaller than Limit2]]></Comment>
 							<SuName>Term 9 (EL6751)</SuName>
 							<DcMode>53796e6368726f6e0000000000000000534d2d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
 							<DcMode>444353594e430000000000000000000044432d53796e6368726f6e000000000000000000000000000000000000000000000000000000000090d00300000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
-							<Pdo Name="Device 1 (EL6751)" Index="#x1a80" Flags="#x0011" SyncMan="3">
-								<Entry Name="Device 1 (EL6751)_Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
+							<Pdo Name="Device" Index="#x1a80" Flags="#x0011" SyncMan="3">
+								<Entry Name="Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
 									<Type>USINT</Type>
 								</Entry>
-								<Entry Name="Device 1 (EL6751)_CanState" Index="#xf100" Sub="#x03" Flags="#x00000100">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_RxErrorCounter" Index="#xf100" Sub="#x05" Flags="#x00000100">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_TxErrorCounter" Index="#xf100" Sub="#x04" Flags="#x00000100">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
+								<Entry Name="DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -1736,7 +1727,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 				</Box>
 				<EtherCAT/>
 			</Device>
-			<Device Id="1" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
+			<Device Id="1" Disabled="true" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
 				<Name>Device 1 (EL6751)</Name>
 				<AddressInfo>
 					<Ecat>
@@ -1759,7 +1750,6 @@ Bit1: Value smaller than Limit2]]></Comment>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^mas516_PLC^mas516_PLC Instance">
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Box 10 (Fraba EtherCAT)">
 				<Link VarA="PlcTask Inputs^G_Inputs.nEncoderValue" VarB="Encoder^Position Value"/>

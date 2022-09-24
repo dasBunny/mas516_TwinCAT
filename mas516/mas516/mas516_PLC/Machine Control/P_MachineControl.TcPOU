@@ -3,66 +3,68 @@
   <POU Name="P_MachineControl" Id="{a90e0789-57c0-407b-b2f1-afc96a165b42}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM P_MachineControl
 VAR
-	fbWinchValveOutput 		: FB_ValveOutput;
-	fbCylValveOutput 		: FB_ValveOutput;
-	fbWinchSoftStop  		: FB_SoftStop;
-	fbCylSoftStop  			: FB_SoftStop;
+	fbManualControlWinch 		: FB_ManualControl;
+	fbManualControlCyl	 		: FB_ManualControl;
+	fbAutomaticControlWinch 	: FB_AutomaticControl;
+	fbAutomaticControlCyl	 	: FB_AutomaticControl;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[G_Work.bManualMode := G_Inputs.bManualModeSelector;
+G_Work.bAutoMode := G_Inputs.bAutoModeSelector;
 
-fbWinchSoftStop(
-fNormalizedInput := G_Sensors.fJoystickNormalizedY,
-stSoftstop := G_Parameters.stWinchSoftStop,
-bSoftStopActive => G_Work.bWinchSoftStopActive
+G_Work.bWinchEnable := (G_Hmi.bWinchEnable AND G_Inputs.bJoystickEnable);
+G_Work.bCylEnable :=  (G_Hmi.bCylEnable AND G_Inputs.bJoystickEnable);
+
+fbManualControlWinch(
+	bEnable := G_Work.bManualMode AND G_Work.bWinchEnable,
+	fInput := G_Sensors.fJoystickNormalizedY*-G_Parameters.fWinchSpeedReducerGain,
+	fControlRefSignal => G_Work.fWinchControlInput
 );
 
-G_Outputs.stWinchValveOutput.bEnable := G_Work.bManualMode;
-
-fbWinchValveOutput(
-	bEnable := (G_Work.bManualMode AND G_Inputs.bJoystickEnable AND NOT(fbWinchSoftStop.bSoftStopActive)),
-	stValveDeadBand := G_Parameters.stWinchValveDeadBand,
-	fNormalizedInput := G_Sensors.fJoystickNormalizedY*-G_Parameters.fWinchSpeedReducerGain,
-	nOutput => G_Outputs.stWinchValveOutput.nValveOutput
+fbManualControlCyl(
+	bEnable := G_Work.bManualMode AND G_Work.bCylEnable,
+	fInput := G_Sensors.fJoystickNormalizedX*G_Parameters.fCylSpeedReducerGain,
+	fControlRefSignal => G_Work.fCylControlInput
 );
 
-fbCylSoftStop(
-fNormalizedInput := G_Sensors.fJoystickNormalizedX,
-stSoftstop := G_Parameters.stCylSoftStop,
-bSoftStopActive => G_Work.bCylSoftStopActive
+fbAutomaticControlWinch(
+	bEnable := G_Work.bAutoMode AND G_Work.bWinchEnable,
+	bStartMotion := G_Inputs.bStartButton,
+	bStopMotion := G_Inputs.bStopButton,
+	stValveOutputGeneratorSettings := G_Parameters.stWinchValveOutputGeneratorSettings,
+	fNormalizedValveOpeningRefSignal => G_Work.fWinchControlInput
 );
 
-G_Outputs.stCylValveOutput.bEnable := G_Work.bManualMode;
-
-fbCylValveOutput(
-	bEnable := (G_Work.bManualMode AND G_Inputs.bJoystickEnable AND NOT(fbCylSoftStop.bSoftStopActive)),
-	stValveDeadBand := G_Parameters.stCylValveDeadBand,
-	fNormalizedInput := G_Sensors.fJoystickNormalizedX*G_Parameters.fCylSpeedReducerGain,
-	nOutput => G_Outputs.stCylValveOutput.nValveOutput
-);
-
- ]]></ST>
+fbAutomaticControlCyl(
+	bEnable := G_Work.bAutoMode AND G_Work.bCylEnable,
+	bStartMotion := G_Inputs.bStartButton,
+	bStopMotion := G_Inputs.bStopButton,
+	stValveOutputGeneratorSettings := G_Parameters.stCylValveOutputGeneratorSettings,
+	fNormalizedValveOpeningRefSignal => G_Work.fCylControlInput
+);]]></ST>
     </Implementation>
     <LineIds Name="P_MachineControl">
       <LineId Id="5" Count="0" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="29" Count="0" />
-      <LineId Id="35" Count="2" />
-      <LineId Id="34" Count="0" />
-      <LineId Id="56" Count="0" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="10" Count="3" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="16" Count="1" />
-      <LineId Id="43" Count="4" />
-      <LineId Id="42" Count="0" />
-      <LineId Id="57" Count="1" />
-      <LineId Id="18" Count="4" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="6" Count="0" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="68" Count="0" />
       <LineId Id="39" Count="0" />
       <LineId Id="38" Count="0" />
+      <LineId Id="103" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="105" Count="0" />
+      <LineId Id="107" Count="1" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="110" Count="4" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="86" Count="3" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="91" Count="5" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="90" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

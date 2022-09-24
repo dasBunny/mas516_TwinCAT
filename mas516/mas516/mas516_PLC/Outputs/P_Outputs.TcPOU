@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="P_Outputs" Id="{05725e2c-789e-4faf-9ddc-3f7ec72a2093}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_Outputs
+VAR
+	fbWinchValveOutput 		: FB_ValveOutput;
+	fbCylValveOutput 		: FB_ValveOutput;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[///////////////////// Winch //////////////////////////////
+G_Outputs.stWinchValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode; 
+
+fbWinchValveOutput(
+	bEnable := G_Work.bWinchEnable,
+	stValveDeadBand := G_Parameters.stWinchValveDeadBand,
+	fNormalizedInput := G_Work.fWinchControlInput,
+	nOutput => G_Outputs.stWinchValveOutput.nValveOutput
+);
+
+///////////////////// Cylinder //////////////////////////////
+G_Outputs.stCylValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode;
+
+fbCylValveOutput(
+	bEnable := G_Work.bCylEnable,
+	stValveDeadBand := G_Parameters.stCylValveDeadBand,
+	fNormalizedInput := G_Work.fCylControlInput,
+	nOutput => G_Outputs.stCylValveOutput.nValveOutput
+);
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="P_Outputs">
+      <LineId Id="89" Count="0" />
+      <LineId Id="84" Count="1" />
+      <LineId Id="11" Count="2" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="86" Count="1" />
+      <LineId Id="18" Count="4" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="83" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="ST_FlowMeterInputScaling" Id="{3f5d5e7d-ea14-4146-a95c-5a405183e641}">
+    <Declaration><![CDATA[TYPE ST_FlowMeterInputScaling :
+STRUCT
+	fMaxInputValue			: LREAL;	// tunable max input value
+	fMinInputValue 			: LREAL;	// tunable min input value
+	fNeutralInputValue  	: LREAL;	// tunable neutral input value
+	fNeutralDeadband		: LREAL;	// tunable dead_band value
+	fMaxOutputValue  		: LREAL;	// normalized max output value
+	fMinOutputValue  		: LREAL;	// normalized min output value
+	fNeutralOutputValue  	: LREAL;	// normalized neutral output value
+END_STRUCT
+END_TYPE
+ ]]></Declaration>
+  </DUT>
+</TcPlcObject>
