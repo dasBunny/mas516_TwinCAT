@@ -6,14 +6,15 @@ VAR_GLOBAL
 	fCyclicTime 					: LREAL := 0.001; // [s]
 	fMaxCylVelocityLimit 			: LREAL := 0.005; // [m/s]
 	fMaxWinchVelocityLimit 			: LREAL := 0.005; // [rad/s]
+	bDeadBandCompOn 				: BOOL := FALSE;
 	stWinchValveDeadBand 			: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 20950.0, fNegMin := 18250.0, fNegMax := 9830.0);
 	stCylValveDeadBand 				: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 20950.0, fNegMin := 18250.0, fNegMax := 9830.0);
 	stPressureSensorScaling400bar 	: ST_AnalogInputScaling := (fMaxInputValue := 32767.0, fMinInputValue := 0.0, fMaxOutputValue := 400.0, fMinOutputValue := 0.0);
 	stPressureSensorScaling40bar 	: ST_AnalogInputScaling := (fMaxInputValue := 32767.0, fMinInputValue := 0.0, fMaxOutputValue := 40.0, fMinOutputValue := 0.0);
-	stJoystickInputScalingX 		: ST_JoystickInputScaling := (fMaxInputValue := 20509.0, fMinInputValue := 11787.0, fNeutralInputValue := 16150, fNeutralDeadband := 50.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
+	stJoystickInputScalingX 		: ST_JoystickInputScaling := (fMaxInputValue := 20509.0, fMinInputValue := 11787.0, fNeutralInputValue := 16175, fNeutralDeadband := 50.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
 	stCylPistonPositionScaling 		: ST_AnalogInputScaling := (fMaxInputValue := 32295.0, fMinInputValue := 229.0, fMaxOutputValue := 0.5, fMinOutputValue := 0.0);
-	stFlowMeterInputScaling 		: ST_FlowMeterInputScaling := (fMaxInputValue := 32295.0, fMinInputValue := 0.0, fNeutralInputValue := 16150, fNeutralDeadband := 50.0, fMaxOutputValue := 150.0, fMinOutputValue := -150.0, fNeutralOutputValue := 0.0);
-	stJoystickInputScalingY 		: ST_JoystickInputScaling := (fMaxInputValue := 20504.0, fMinInputValue := 12160.0, fNeutralInputValue := 16637, fNeutralDeadband := 50.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
+	stFlowMeterInputScaling 		: ST_FlowMeterInputScaling := (fMaxInputValue := 32295.0, fMinInputValue := 0.0, fNeutralInputValue := 15450, fNeutralDeadband := 50.0, fMaxOutputValue := 150.0, fMinOutputValue := -150.0, fNeutralOutputValue := 0.0);
+	stJoystickInputScalingY 		: ST_JoystickInputScaling := (fMaxInputValue := 20504.0, fMinInputValue := 12160.0, fNeutralInputValue := 16640, fNeutralDeadband := 50.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
 	fEncoderOffset 					: LREAL := 17361.0; // Encoder value at zero (Cylinder out / second layaer)
 	fWinchDrumRadius				: LREAL := 0.0475; // [m]  (Cylinder out / second layaer)
 	fWinchSpeedReducerGain 			: LREAL := 0.2;

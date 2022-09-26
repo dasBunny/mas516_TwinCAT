@@ -28,7 +28,7 @@ ELSE
 	fTempOutput := 0.0;
 END_IF
 
-fNormalizedOutput := LIMIT(stFlowMeterInputScaling.fMinOutputValue, fTempOutput, stFlowMeterInputScaling.fMaxOutputValue);
+fNormalizedOutput := LIMIT(stFlowMeterInputScaling.fMinOutputValue, fTempOutput*150.0, stFlowMeterInputScaling.fMaxOutputValue);
 ]]></ST>
     </Implementation>
     <LineIds Name="FB_FlowMeterInputScaling">

@@ -8,9 +8,9 @@ VAR_GLOBAL
 	bWinchEnable 			: BOOL;
 	bCylEnable 				: BOOL;
 	fWinchControlInput 		: LREAL;
+	fWinchTime				: LREAL;
 	fCylControlInput 		: LREAL;
-	bWinchSoftStopActive 	: BOOL;
-	bCylSoftStopActive 		: BOOL; 
+	fCylTime				: LREAL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

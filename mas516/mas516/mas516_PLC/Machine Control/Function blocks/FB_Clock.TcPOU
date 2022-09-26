@@ -3,6 +3,7 @@
   <POU Name="FB_Clock" Id="{f13c44f0-374f-4488-b500-abcfceb96f9b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_Clock
 VAR_INPUT
+	bEnable 	: BOOL;
 	bStart 		: BOOL;
 	bStop 		: BOOL;
 	fCycleTime  : LREAL;
@@ -14,7 +15,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF bStart AND NOT(bStop) THEN
+      <ST><![CDATA[IF bStart AND NOT(bStop) AND bEnable THEN
 	fTime := fTime + fCycleTime;
 ELSE
 	fTime := 0.0;

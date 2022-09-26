@@ -19,6 +19,7 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fbClock(
+	bEnable := bEnable,
 	bStart := bStartMotion,
 	bStop := bStopMotion,
 	fCycleTime := G_Parameters.fCyclicTime
@@ -31,12 +32,13 @@ fbValveOutputGenerator(
 );
 
 fNormalizedValveOpeningRefSignal := fbValveOutputGenerator.fNormalizedValveOutputRef;
-
+fTime := fbClock.fTime;
 
 ]]></ST>
     </Implementation>
     <LineIds Name="FB_AutomaticControl">
       <LineId Id="21" Count="0" />
+      <LineId Id="207" Count="0" />
       <LineId Id="25" Count="0" />
       <LineId Id="31" Count="0" />
       <LineId Id="26" Count="0" />

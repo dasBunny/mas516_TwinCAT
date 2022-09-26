@@ -26,7 +26,13 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[fInitialValveOpening	:= stValveOutputGeneratorSettings.fInitialValveOpening;
+fValveOpeningSetPoint	:= stValveOutputGeneratorSettings.fValveOpeningSetPoint;
+fTimeBeforeStarting_s	:= stValveOutputGeneratorSettings.fTimeBeforeStarting_s;
+fRampTime_s				:= stValveOutputGeneratorSettings.fRampTime_s;
+fHoldTime_s				:= stValveOutputGeneratorSettings.fHoldTime_s;
+fWaitTime_s				:= stValveOutputGeneratorSettings.fWaitTime_s;
+
 (* Outputs for Atomic SubSystem: '<Root>/FB_AutomaticValveOutputGenerator' *)
 (* Saturate: '<S1>/Saturation2' *)
 
@@ -166,7 +172,10 @@ fTotalMotionTime_s := ((((((fTimeBeforeStarting_s + fRampTime_s) + fHoldTime_s) 
 ]]></ST>
     </Implementation>
     <LineIds Name="FB_ValveOutputGenerator">
-      <LineId Id="3" Count="136" />
+      <LineId Id="166" Count="4" />
+      <LineId Id="163" Count="0" />
+      <LineId Id="171" Count="0" />
+      <LineId Id="4" Count="135" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

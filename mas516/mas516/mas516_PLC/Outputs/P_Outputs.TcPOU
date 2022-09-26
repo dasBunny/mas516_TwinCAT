@@ -12,7 +12,8 @@ END_VAR
 G_Outputs.stWinchValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode; 
 
 fbWinchValveOutput(
-	bEnable := G_Work.bWinchEnable,
+	bEnable := G_Work.bWinchEnable OR G_Work.fWinchTime > 0.0,
+	bDeadBandCompOn := G_Parameters.bDeadBandCompOn,
 	stValveDeadBand := G_Parameters.stWinchValveDeadBand,
 	fNormalizedInput := G_Work.fWinchControlInput,
 	nOutput => G_Outputs.stWinchValveOutput.nValveOutput
@@ -22,7 +23,8 @@ fbWinchValveOutput(
 G_Outputs.stCylValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode;
 
 fbCylValveOutput(
-	bEnable := G_Work.bCylEnable,
+	bEnable := G_Work.bCylEnable OR G_Work.fCylTime > 0.0,
+	bDeadBandCompOn := G_Parameters.bDeadBandCompOn,
 	stValveDeadBand := G_Parameters.stCylValveDeadBand,
 	fNormalizedInput := G_Work.fCylControlInput,
 	nOutput => G_Outputs.stCylValveOutput.nValveOutput
@@ -34,12 +36,16 @@ fbCylValveOutput(
     <LineIds Name="P_Outputs">
       <LineId Id="89" Count="0" />
       <LineId Id="84" Count="1" />
-      <LineId Id="11" Count="2" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="13" Count="0" />
       <LineId Id="59" Count="0" />
       <LineId Id="16" Count="1" />
       <LineId Id="88" Count="0" />
       <LineId Id="86" Count="1" />
-      <LineId Id="18" Count="4" />
+      <LineId Id="18" Count="2" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="21" Count="1" />
       <LineId Id="24" Count="0" />
       <LineId Id="6" Count="0" />
       <LineId Id="39" Count="0" />
