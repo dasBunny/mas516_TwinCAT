@@ -69,7 +69,12 @@ fbAutomaticControlWinch(
 	stClosedLoopControlSettings := G_Parameters.stParam.stClosedLoopControlSettingsWinch,
 	stOpenLoopControlSettings := G_Parameters.stParam.stOpenLoopControlSettingsWinch,
 	stParam := G_Parameters.stParam,
-	fPositionFeedback := G_Sensors.fWinchWirePosition
+	fPositionFeedback := G_Sensors.fWinchWirePosition,
+	fVelocityReference_ms => G_Work.fVelRefWinch,
+	fPositionReference_m => G_Work.fPosRefWinch,
+	fTime => G_Work.fWinchTime,
+	fPositionError_mm => G_Work.fPositionErrorWinch_mm,
+	fControlOutputNormalized => G_Work.fControlSignWinch
 );
 
 
@@ -88,15 +93,20 @@ fbAutomaticControlCylinder(
 	stClosedLoopControlSettings := G_Parameters.stParam.stClosedLoopControlSettingsCylinder,
 	stOpenLoopControlSettings := G_Parameters.stParam.stOpenLoopControlSettingsCylinder,
 	stParam := G_Parameters.stParam,
-	fPositionFeedback := G_Sensors.fPositionCylPiston
+	fPositionFeedback := G_Sensors.fPositionCylPiston,
+	fVelocityReference_ms => G_Work.fVelRefCyl,
+	fPositionReference_m => G_Work.fPosRefCyl,
+	fTime => G_Work.fCylTime,
+	fPositionError_mm => G_Work.fPositionErrorCylinder_mm,
+	fControlOutputNormalized => G_Work.fControlSignCyl
 );
 
 IF G_Work.bManualMode THEN
 	G_Work.fWinchControlInput := fWinchControlSignalManual;
 	G_Work.fCylControlInput := fCylControlSignalManual;
 ELSIF G_Work.bAutoMode THEN
-	G_Work.fWinchControlInput := fWinchControlSignalAuto;
-	G_Work.fCylControlInput := -fCylControlSignalAuto;
+	G_Work.fWinchControlInput := G_Work.fControlSignWinch;
+	G_Work.fCylControlInput := -G_Work.fControlSignCyl;
 ELSE
 	G_Work.fWinchControlInput := 0.0; 
 	G_Work.fCylControlInput := 0.0;
@@ -137,6 +147,10 @@ END_IF]]></ST>
       <LineId Id="246" Count="0" />
       <LineId Id="250" Count="0" />
       <LineId Id="235" Count="1" />
+      <LineId Id="280" Count="1" />
+      <LineId Id="286" Count="0" />
+      <LineId Id="289" Count="0" />
+      <LineId Id="282" Count="0" />
       <LineId Id="163" Count="0" />
       <LineId Id="222" Count="0" />
       <LineId Id="205" Count="1" />
@@ -145,6 +159,9 @@ END_IF]]></ST>
       <LineId Id="162" Count="0" />
       <LineId Id="253" Count="0" />
       <LineId Id="255" Count="9" />
+      <LineId Id="284" Count="1" />
+      <LineId Id="287" Count="1" />
+      <LineId Id="283" Count="0" />
       <LineId Id="254" Count="0" />
       <LineId Id="137" Count="2" />
       <LineId Id="144" Count="0" />

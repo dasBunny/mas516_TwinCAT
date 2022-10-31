@@ -15,7 +15,10 @@ VAR_INPUT
 END_VAR
 VAR_OUTPUT
 	fTime : LREAL;
+	fVelocityReference_ms : LREAL;
+	fPositionReference_m : LREAL;
 	fControlOutputNormalized : LREAL;
+	fPositionError_mm : LREAL;
 END_VAR
 VAR
 	fbClock : FB_Clock;	
@@ -61,6 +64,11 @@ fbClosedLoopPositionControl(
 	fFeedback_m := fPositionFeedback
 );
 
+fVelocityReference_ms := fbMotionReferenceGenerator.fVelocityReference_ms;
+fPositionReference_m := fbMotionReferenceGenerator.fPositionReference_m;
+fTime := fbClock.fTime;
+fPositionError_mm := fbClosedLoopPositionControl.fPositionError*1E3;
+
 IF bEnable THEN
 	fControlOutputNormalized := LIMIT(-1.0, (fbVelocityFeedForwardControl.fNormalizedOutput + fbClosedLoopPositionControl.fNormalizedOutput), 1.0);
 ELSE
@@ -95,6 +103,10 @@ END_IF]]></ST>
       <LineId Id="98" Count="0" />
       <LineId Id="165" Count="0" />
       <LineId Id="71" Count="0" />
+      <LineId Id="247" Count="0" />
+      <LineId Id="246" Count="0" />
+      <LineId Id="248" Count="1" />
+      <LineId Id="252" Count="0" />
       <LineId Id="139" Count="0" />
       <LineId Id="138" Count="0" />
       <LineId Id="141" Count="0" />

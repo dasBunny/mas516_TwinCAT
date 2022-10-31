@@ -4305,14 +4305,14 @@
                 <v n="VisualElementIdentifier">"GenElemInst_56"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="InputBoxInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
                   <v>OnMouseDown</v>
                   <a cet="InputBoxInputAction">
                     <o>
                       <v n="InputBoxVariable">""</v>
                       <v n="InputType">"Default"</v>
                       <v n="InputBoxMin">"0"</v>
-                      <v n="InputBoxMax">"40"</v>
+                      <v n="InputBoxMax">"100"</v>
                       <v n="InputBoxDialogTitle">""</v>
                       <v n="Password">false</v>
                       <v n="UseTextOutputVariable">true</v>
@@ -5399,10 +5399,10 @@
               <d n="FbMethods" t="CaseInsensitiveHashtable" ckt="String" cvt="Guid">
                 <v>FB_Init</v>
                 <v>0b25426b-7a47-4215-bdd6-dc0d804e0efd</v>
-                <v>FB_Reinit</v>
-                <v>6fad11ce-233a-45fb-9014-2ef2bed2ea6f</v>
                 <v>FB_Exit</v>
                 <v>ab1f7148-6cd5-438d-b9b8-8e8ebdb96439</v>
+                <v>FB_Reinit</v>
+                <v>6fad11ce-233a-45fb-9014-2ef2bed2ea6f</v>
               </d>
               <v n="FbName">"NotImportant"</v>
               <v n="FbGuid">{8e37524a-6c18-4507-a5d2-3229424c76d5}</v>
@@ -5510,6 +5510,7 @@
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
+        <Type n="IInputAction[]">_3S.CoDeSys.VisualElem.IInputAction[], VisualElem, Version=3.5.13.0, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="InputBoxInputAction">{e8e7e747-f76f-4dee-ab1c-b9637e41ac26}</Type>
         <Type n="InputBoxInputAction[]">_3S.CoDeSys.VisualElem.InputBoxInputAction[], VisualElem.plugin, Version=3.5.13.32, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="Int16">System.Int16</Type>

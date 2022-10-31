@@ -5,7 +5,7 @@
 STRUCT
 	fBoreArea 			: LREAL := 0.0033183;
 	fAnnulusArea 		: LREAL := 0.0023562;
-	fMaxFlowCapacity 	: LREAL := 30; //[l/min]
+	fMaxFlowCapacity 	: LREAL := 75; //[l/min]
 END_STRUCT
 END_TYPE
 ]]></Declaration>

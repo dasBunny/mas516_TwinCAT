@@ -11,6 +11,14 @@ VAR_GLOBAL
 	fWinchTime				: LREAL;
 	fCylControlInput 		: LREAL;
 	fCylTime				: LREAL;
+	fVelRefWinch 			: LREAL;
+	fPosRefWinch 			: LREAL;
+	fControlSignWinch		: LREAL;
+	fVelRefCyl 				: LREAL;
+	fPosRefCyl 				: LREAL;
+	fControlSignCyl			: LREAL;
+	fPositionErrorWinch_mm 	: LREAL;
+	fPositionErrorCylinder_mm : LREAL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

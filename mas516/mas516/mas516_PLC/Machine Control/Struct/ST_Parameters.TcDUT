@@ -6,7 +6,7 @@ STRUCT
 	fCyclicTime 					: LREAL := 0.001; // [s]
 	fMaxCylVelocityLimit 			: LREAL := 0.005; // [m/s]
 	fMaxWinchVelocityLimit 			: LREAL := 0.005; // [rad/s]
-	bDeadBandCompOn 				: BOOL := FALSE;
+	bDeadBandCompOn 				: BOOL := TRUE;
 	stWinchValveDeadBand 			: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 20950.0, fNegMin := 18250.0, fNegMax := 9830.0);
 	stCylValveDeadBand 				: ST_ValveDeadBand := (fPosMax := 29490.0, fPosMin := 20950.0, fNegMin := 18250.0, fNegMax := 9830.0);
 	stPressureSensorScaling400bar 	: ST_AnalogInputScaling := (fMaxInputValue := 32767.0, fMinInputValue := 0.0, fMaxOutputValue := 400.0, fMinOutputValue := 0.0);
@@ -22,9 +22,9 @@ STRUCT
 	stWinchValveOutputGeneratorSettings  	: ST_ValveOutputGeneratorSettings := (fInitialValveOpening := 0.0, fValveOpeningSetPoint := 0.2, fTimeBeforeStarting_s := 3.0, fRampTime_s := 1.0, fHoldTime_s := 1.0, fWaitTime_s := 5.0);
 	stCylValveOutputGeneratorSettings  		: ST_ValveOutputGeneratorSettings := (fInitialValveOpening := 0.0, fValveOpeningSetPoint := 0.2, fTimeBeforeStarting_s := 3.0, fRampTime_s := 1.0, fHoldTime_s := 1.0, fWaitTime_s := 5.0);
 	stOpenLoopControlSettingsWinch 			: ST_OpenLoopControlSettings;
-	stClosedLoopControlSettingsWinch 		: ST_ClosedLoopControlSettings;
+	stClosedLoopControlSettingsWinch 		: ST_ClosedLoopControlSettings := (fMaxPositionError := 2E-3, fProportionalGain := 1.0, fIntegralGain := 1.0);
 	stOpenLoopControlSettingsCylinder 		: ST_OpenLoopControlSettings;
-	stClosedLoopControlSettingsCylinder 	: ST_ClosedLoopControlSettings;	
+	stClosedLoopControlSettingsCylinder 	: ST_ClosedLoopControlSettings := (fMaxPositionError := 2E-3, fProportionalGain := 14.6, fIntegralGain := 9.75);	
 END_STRUCT
 END_TYPE
 ]]></Declaration>
