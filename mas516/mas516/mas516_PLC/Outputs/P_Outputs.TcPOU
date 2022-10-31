@@ -13,8 +13,8 @@ G_Outputs.stWinchValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode;
 
 fbWinchValveOutput(
 	bEnable := G_Work.bWinchEnable OR G_Work.fWinchTime > 0.0,
-	bDeadBandCompOn := G_Parameters.bDeadBandCompOn,
-	stValveDeadBand := G_Parameters.stWinchValveDeadBand,
+	bDeadBandCompOn := G_Parameters.stParam.bDeadBandCompOn,
+	stValveDeadBand := G_Parameters.stParam.stWinchValveDeadBand,
 	fNormalizedInput := G_Work.fWinchControlInput,
 	nOutput => G_Outputs.stWinchValveOutput.nValveOutput
 );
@@ -24,8 +24,8 @@ G_Outputs.stCylValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode;
 
 fbCylValveOutput(
 	bEnable := G_Work.bCylEnable OR G_Work.fCylTime > 0.0,
-	bDeadBandCompOn := G_Parameters.bDeadBandCompOn,
-	stValveDeadBand := G_Parameters.stCylValveDeadBand,
+	bDeadBandCompOn := G_Parameters.stParam.bDeadBandCompOn,
+	stValveDeadBand := G_Parameters.stParam.stCylValveDeadBand,
 	fNormalizedInput := G_Work.fCylControlInput,
 	nOutput => G_Outputs.stCylValveOutput.nValveOutput
 );

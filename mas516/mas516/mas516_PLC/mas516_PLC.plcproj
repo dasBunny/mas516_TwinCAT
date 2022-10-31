@@ -20,11 +20,25 @@
     <Compile Include="GlobalTextList.TcGTLO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="HMI\Function blocks\FB_ModifyAutomaticControlSettings.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="HMI\G_Hmi.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
-    <Compile Include="HMI\Visualization.TcVIS">
+    <Compile Include="HMI\Main.TcVIS">
+      <SubType>Code</SubType>
+      <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\Struct\ST_ModifyAutomaticControlSettings.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HMI\Sub\Cylinder.TcVIS">
+      <SubType>Code</SubType>
+      <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
+    </Compile>
+    <Compile Include="HMI\Sub\Winch.TcVIS">
       <SubType>Code</SubType>
       <DependentUpon>Visualization Manager.TcVMO</DependentUpon>
     </Compile>
@@ -69,10 +83,25 @@
     <Compile Include="Inputs\Struct\ST_FlowMeterInputScaling.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_AutomaticControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_ClosedLoopControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_MotionReferenceGenerator_limit.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_OpenLoopControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_ResetIntegralController.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Machine Control\Function blocks\FB_ValveOutputGenerator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Machine Control\Function blocks\FB_AutomaticControl.TcPOU">
+    <Compile Include="Machine Control\Function blocks\FB_AutomaticControl_old.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_Clock.TcPOU">
@@ -90,6 +119,21 @@
       <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="Machine Control\P_MachineControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Struct\ST_AutomaticControlSettings.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Struct\ST_ClosedLoopControlSettings.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Struct\ST_MotionReferenceGeneratorSettings.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Struct\ST_OpenLoopControlSettings.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Struct\ST_Parameters.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Struct\ST_ValveOutputGeneratorSettings.TcDUT">
@@ -122,6 +166,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="HMI\Function blocks" />
+    <Folder Include="HMI\Struct" />
+    <Folder Include="HMI\Sub" />
     <Folder Include="Inputs" />
     <Folder Include="Inputs\Function blocks" />
     <Folder Include="Inputs\Functions" />
@@ -189,6 +236,10 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="VisuDialogs">
+      <DefaultResolution>VisuDialogs, * (System)</DefaultResolution>
+      <Namespace>VisuDialogs</Namespace>
+    </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="mas516_PLC.tmc">
@@ -198,8 +249,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -248,14 +299,14 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Boolean">System.Boolean</Type>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

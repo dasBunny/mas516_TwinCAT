@@ -163,7 +163,7 @@
 		<ImageData Id="1005">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1006">424dd6020000000000003600000028000000100000000e00000001001800000000000000000074120000741200000000000000000000fffffffffffffffffff7f7f7f7f7f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffa2a2a2a2a2a2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffcfcfcf808080808080fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbfbfb808080828282808080edededfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff3f3f3b4b4b4808080828282c0c0c0f4f4f4fffffffffffffffffffffffffffffff3f3f3ffffffffffffffffffffffffc0c0c08a8a8a808080b2b2b28080808080808383838686868a8a8a8d8d8d8080809e9e9effffffffffffffffffffffffcececebcbcbcb8b8b8a8a8a88787878b8b8b8e8e8e929292959595999999b8b8b8b8b8b8d6d6d6ffffffffffffffffffc0c0c0dcdcdcf7f7f79e9e9e9393939696969a9a9a9d9d9da1a1a1a4a4a4f7f7f7dcdcdc808080ffffffffffffffffffaaaaaa9494949494949595959f9f9fa2a2a2a6a6a6a9a9a9adadadb0b0b0949494aaaaaa969696d4d4d4d3d3d3ffffffa0a0a08080808c8c8c959595aaaaaaaeaeaeb1b1b1b5b5b5b8b8b8bcbcbc8c8c8cc4c4c4868686cacacae5e5e5ffffffdededeccccccdededec5c5c5b6b6b6b9b9b9bdbdbdc1c1c1c4c4c4c8c8c8dededec4c4c4909090ffffffffffffffffffebebebd4d4d4edededd8d8d8c2c2c2c5c5c5c9c9c9ccccccd0d0d0d3d3d3ededed989898bababaffffffffffffffffffd2d2d2929292888888cacacacdcdcdd1d1d1d4d4d4d8d8d8dbdbdbdfdfdf888888989898f7f7f7fffffffffffffffffffbfbfbbcbcbcc6c6c6d8d8d8d9d9d9dddddde0e0e0e4e4e4e7e7e7ebebebc6c6c6f3f3f3ffffffffffffffffffffffff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" TargetNetId="5.80.90.242.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
+	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="10000" AmsPort="350" AdtTasks="true">
@@ -173,7 +173,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{49FED982-BC8A-4BF0-A28B-25164CD2DF05}" Name="mas516_PLC" PrjFilePath="mas516_PLC\mas516_PLC.plcproj" TmcFilePath="mas516_PLC\mas516_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{3661949F-69AC-E340-8FAB-FB54515C15FE}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{F59A4681-FDB9-2003-791E-66DCC217418C}">
 					<Name>mas516_PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -271,10 +271,6 @@
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinch_A1_Input.nValue</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>G_Inputs.stPressureWinch_B_Output.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
@@ -283,15 +279,19 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
-							<Name>G_Inputs.stPressureWinch_B1_Output.stStatus</Name>
-							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
-						</Var>
-						<Var>
 							<Name>G_Inputs.stPressureWinch_B1_Output.nValue</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>G_Inputs.stPressureWinchDrain.stStatus</Name>
+							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
+						</Var>
+						<Var>
+							<Name>G_Inputs.stPressureWinch_A1_Input.nValue</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>G_Inputs.stPressureWinch_B1_Output.stStatus</Name>
 							<Type GUID="{D416A404-C988-AD96-7CED-D32410833B30}">ST_AnalogInputStatus</Type>
 						</Var>
 						<Var>
@@ -394,7 +394,7 @@
 			</Project>
 		</Plc>
 		<Io>
-			<Device Id="3" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
+			<Device Id="3" Disabled="true" DevType="111" DevFlags="#x0003" AmsPort="28675" AmsNetId="128.39.200.184.4.1" RemoteName="Device 3 (EtherCAT)" InfoImageId="3">
 				<Name>Device 3 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
@@ -1669,11 +1669,11 @@ Bit1: Value smaller than Limit2]]></Comment>
 					<Box Id="9" BoxType="9094" BoxFlags="#x00000020">
 						<Name>Term 9 (EL6751)</Name>
 						<ImageId>1004</ImageId>
-						<EtherCAT SlaveType="5" AdsServerAddress="8027c8b802010000" FixedAdsServerNetId="true" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" OwnAddrExtern="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
+						<EtherCAT SlaveType="5" AdsServerAddress="8027c8b8040a0000" PdiType="#x0408" ExecIo="true" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="35" FoeType="1" VendorId="#x00000002" ProductCode="#x1a5f3052" RevisionNo="#x00160000" InfoDataAddr="true" InfoDataNetId="true" TimeoutStateChange1="5000" TimeoutStateChange3="10000" TimeoutStateChange4="1000" TimeoutMailbox2="2000" GenerateOwnNetId="true" InitializeOwnNetId="true" PortPhys="51" MaxSlotCount="126" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6751 CANopen Master" Desc="EL6751" PortABoxInfo="#x01000008">
 							<SyncMan>001000042600010001000000500000040004001026010000</SyncMan>
 							<SyncMan>001400042200010002000000500000040004001422010000</SyncMan>
 							<SyncMan>001800002600000003000000000000000000001826010000</SyncMan>
-							<SyncMan>002406002200010004000000000000000000002422010000</SyncMan>
+							<SyncMan>002402002200010004000000000000000000002422010000</SyncMan>
 							<Fmmu>0000000000000000000000020000000001000000000000000000000000000000</Fmmu>
 							<Fmmu>0000000000000000002400010100000002000000000000000000000000000000</Fmmu>
 							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
@@ -1681,20 +1681,11 @@ Bit1: Value smaller than Limit2]]></Comment>
 							<SuName>Term 9 (EL6751)</SuName>
 							<DcMode>53796e6368726f6e0000000000000000534d2d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
 							<DcMode>444353594e430000000000000000000044432d53796e6368726f6e000000000000000000000000000000000000000000000000000000000090d00300000000070100000000000000000000000000000000000000000000000000000000000000</DcMode>
-							<Pdo Name="Device 1 (EL6751)" Index="#x1a80" Flags="#x0011" SyncMan="3">
-								<Entry Name="Device 1 (EL6751)_Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
+							<Pdo Name="Device" Index="#x1a80" Flags="#x0011" SyncMan="3">
+								<Entry Name="Error" Index="#xf100" Sub="#x01" Flags="#x00000100">
 									<Type>USINT</Type>
 								</Entry>
-								<Entry Name="Device 1 (EL6751)_CanState" Index="#xf100" Sub="#x03" Flags="#x00000100">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_RxErrorCounter" Index="#xf100" Sub="#x05" Flags="#x00000100">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_TxErrorCounter" Index="#xf100" Sub="#x04" Flags="#x00000100">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="Device 1 (EL6751)_DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
+								<Entry Name="DiagFlag" Index="#xf100" Sub="#x02" Flags="#x00000100">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -1736,7 +1727,7 @@ Bit1: Value smaller than Limit2]]></Comment>
 				</Box>
 				<EtherCAT/>
 			</Device>
-			<Device Id="1" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
+			<Device Id="1" Disabled="true" DevType="87" AmsPort="28673" AmsNetId="128.39.200.184.2.1" RemoteName="Device 1 (EL6751)">
 				<Name>Device 1 (EL6751)</Name>
 				<AddressInfo>
 					<Ecat>
@@ -1759,7 +1750,6 @@ Bit1: Value smaller than Limit2]]></Comment>
 		</Io>
 	</Project>
 	<Mappings>
-		<MappingInfo Identifier="{00000000-2001-0850-0020-500820000403}" Id="#x02030010"/>
 		<OwnerA Name="TIPC^mas516_PLC^mas516_PLC Instance">
 			<OwnerB Name="TIID^Device 3 (EtherCAT)^Box 10 (Fraba EtherCAT)">
 				<Link VarA="PlcTask Inputs^G_Inputs.nEncoderValue" VarB="Encoder^Position Value"/>

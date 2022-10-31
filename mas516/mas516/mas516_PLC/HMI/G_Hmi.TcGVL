@@ -5,6 +5,12 @@
 VAR_GLOBAL
 	bWinchEnable	: BOOL;
 	bCylEnable 		: BOOL;
+	stAutomaticControlSettingsWinch 			: ST_AutomaticControlSettings;
+	stMotionReferenceGeneratorSettingsWinch  	: ST_MotionReferenceGeneratorSettings;
+	stAutomaticControlSettingsCylinder 			: ST_AutomaticControlSettings;
+	stMotionReferenceGeneratorSettingsCylinder  : ST_MotionReferenceGeneratorSettings;
+	stModifyAutomaticControlSettingsWinch 		: ST_ModifyAutomaticControlSettings;
+	stModifyAutomaticControlSettingsCylinder 	: ST_ModifyAutomaticControlSettings;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

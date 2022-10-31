@@ -25,14 +25,14 @@ END_VAR]]></Declaration>
       <ST><![CDATA[fbJoystickWinch(
 	bEnable := G_Work.bManualMode,
 	nRawInput := G_Inputs.stJoyY.nValue,
-	stJoystickInputScaling := G_Parameters.stJoystickInputScalingY,
+	stJoystickInputScaling := G_Parameters.stParam.stJoystickInputScalingY,
 	fNormalizedOutput => G_Sensors.fJoystickNormalizedY
 );
 
 fbJoystickCyl(
 	bEnable := G_Work.bManualMode,
 	nRawInput := G_Inputs.stJoyX.nValue,
-	stJoystickInputScaling := G_Parameters.stJoystickInputScalingX,
+	stJoystickInputScaling := G_Parameters.stParam.stJoystickInputScalingX,
 	fNormalizedOutput => G_Sensors.fJoystickNormalizedX
 );
 
@@ -41,71 +41,71 @@ nRawInput := G_Inputs.nEncoderValue,
 fPosition => G_Sensors.fWinchEncoderPosition,
 );
 
-G_Sensors.fWinchWirePosition := F_DegToRad(fbWinchPosition.fPosition)*G_Parameters.fWinchDrumRadius;
+G_Sensors.fWinchWirePosition := F_DegToRad(fbWinchPosition.fPosition)*G_Parameters.stParam.fWinchDrumRadius;
 
 fbCylPistonPosition(
 	nRawInput := G_Inputs.stPositionCylPiston.nValue,
-	stAnalogInputScaling := G_Parameters.stCylPistonPositionScaling,
+	stAnalogInputScaling := G_Parameters.stParam.stCylPistonPositionScaling,
 	fOutput => G_Sensors.fPositionCylPiston
 );
 
 fbPressureSupply(
 	nRawInput := G_Inputs.stPressureSupply.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureSupply
 );
 
 fbPressureReturn(
 	nRawInput := G_Inputs.stPressureReturn.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling40bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling40bar,
 	fOutput => G_Sensors.fPressureReturn
 );
 
 fbPressureCyl_A_PistonSide(
 	nRawInput := G_Inputs.stPressureCyl_A_PistonSide.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureCyl_A_PistonSide
 );
 
 fbPressureCyl_B_RodSide(
 	nRawInput := G_Inputs.stPressureCyl_B_RodSide.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureCyl_B_RodSide
 );
 
 fbPressureWinch_A_Input(
 	nRawInput := G_Inputs.stPressureWinch_A_Input.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureWinch_A_Input
 );
 
 fbPressureWinch_A1_Input(
 	nRawInput := G_Inputs.stPressureWinch_A1_Input.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureWinch_A1_Side
 );
 
 fbPressureWinch_B_Output(
 	nRawInput := G_Inputs.stPressureWinch_B_Output.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureWinch_B_Output
 );
 
 fbPressureWinch_B1_Output(
 	nRawInput := G_Inputs.stPressureWinch_B1_Output.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling400bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling400bar,
 	fOutput => G_Sensors.fPressureWinch_B1_Output
 );
 
 fbPressureWinchDrain(
 	nRawInput := G_Inputs.stPressureWinchDrain.nValue,
-	stAnalogInputScaling := G_Parameters.stPressureSensorScaling40bar,
+	stAnalogInputScaling := G_Parameters.stParam.stPressureSensorScaling40bar,
 	fOutput => G_Sensors.fPressureWinchDrain
 );
 
 fbFlowWinch(
 	nRawInput := G_Inputs.stFlowWinch.nValue,
-	stFlowMeterInputScaling := G_Parameters.stFlowMeterInputScaling,
+	stFlowMeterInputScaling := G_Parameters.stParam.stFlowMeterInputScaling,
 	fNormalizedOutput => G_Sensors.fWinchFlow
 );
 ]]></ST>
