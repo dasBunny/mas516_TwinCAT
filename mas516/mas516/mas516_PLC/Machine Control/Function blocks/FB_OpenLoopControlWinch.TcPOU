@@ -19,7 +19,8 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fRads := (fInput_ms/fLin_m_ToRot_deg_Scaling)*3.14/180;
-fFlowReference_lmin := (fDisplacment_cc*(fRads/(2*3.14)*60))/1000;
+//fFlowReference_lmin := (fDisplacment_cc*(fRads/(2*3.14)*60))/1000;
+fFlowReference_lmin := (fDisplacment_cc*1E-5*fRads/(2*3.14))*60000;
 
 IF bEnable THEN 
     fNormalizedOutput := (fFlowReference_lmin) / stOpenLoopControlSettings.fMaxFlowCapacity;
@@ -36,6 +37,7 @@ END_IF;]]></ST>
     <LineIds Name="FB_OpenLoopControlWinch">
       <LineId Id="88" Count="0" />
       <LineId Id="14" Count="0" />
+      <LineId Id="104" Count="0" />
       <LineId Id="21" Count="1" />
       <LineId Id="26" Count="1" />
       <LineId Id="30" Count="1" />

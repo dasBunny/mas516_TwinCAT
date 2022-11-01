@@ -4311,7 +4311,7 @@
                     <o>
                       <v n="InputBoxVariable">""</v>
                       <v n="InputType">"Default"</v>
-                      <v n="InputBoxMin">"0"</v>
+                      <v n="InputBoxMin">"0.0001"</v>
                       <v n="InputBoxMax">"100"</v>
                       <v n="InputBoxDialogTitle">""</v>
                       <v n="Password">false</v>
@@ -5219,10 +5219,10 @@
               <d n="FbMethods" t="CaseInsensitiveHashtable" ckt="String" cvt="Guid">
                 <v>FB_Init</v>
                 <v>bebc992c-ae19-4d51-a3f0-47335ed2379b</v>
-                <v>FB_Exit</v>
-                <v>d38e9c32-4825-417d-8e55-3d6d53444704</v>
                 <v>FB_Reinit</v>
                 <v>317a685a-d9fa-494d-91c3-a8c6f74d24e1</v>
+                <v>FB_Exit</v>
+                <v>d38e9c32-4825-417d-8e55-3d6d53444704</v>
               </d>
               <v n="FbName">"NotImportant"</v>
               <v n="FbGuid">{27bf927e-4695-4568-b612-2c464c54ef3b}</v>

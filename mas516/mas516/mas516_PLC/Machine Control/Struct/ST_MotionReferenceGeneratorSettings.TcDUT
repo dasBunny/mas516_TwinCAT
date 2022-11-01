@@ -7,7 +7,7 @@ STRUCT
 	fStartVelocity_m		: LREAL	:= 0.0;
 	fPositionSetpoint_ms	: LREAL := 0.25;
 	fVelocitySetpoint_m		: LREAL := 0.025;
-	fMaxPosition 			: LREAL := 0.45;
+	fMaxPosition 			: LREAL := 0.7;
 	fMinPosition 			: LREAL := 0.0;
 	fMaxVelocity 			: LREAL := 0.05;
 	fTimeBeforeStarting_s	: LREAL := 3.0;

@@ -22,9 +22,9 @@ STRUCT
 	fDisplacment_cc 				: LREAL := 32;
 	stWinchValveOutputGeneratorSettings  	: ST_ValveOutputGeneratorSettings := (fInitialValveOpening := 0.0, fValveOpeningSetPoint := 0.2, fTimeBeforeStarting_s := 3.0, fRampTime_s := 1.0, fHoldTime_s := 1.0, fWaitTime_s := 5.0);
 	stCylValveOutputGeneratorSettings  		: ST_ValveOutputGeneratorSettings := (fInitialValveOpening := 0.0, fValveOpeningSetPoint := 0.2, fTimeBeforeStarting_s := 3.0, fRampTime_s := 1.0, fHoldTime_s := 1.0, fWaitTime_s := 5.0);
-	stOpenLoopControlSettingsWinch 			: ST_OpenLoopControlSettings;
-	stClosedLoopControlSettingsWinch 		: ST_ClosedLoopControlSettings := (fMaxPositionError := 2E-3, fProportionalGain := 1.0, fIntegralGain := 1.0);
-	stOpenLoopControlSettingsCylinder 		: ST_OpenLoopControlSettings;
+	stOpenLoopControlSettingsWinch 			: ST_OpenLoopControlSettings := (fBoreArea := 0.0, fAnnulusArea := 0.0, fMaxFlowCapacity := 60.0);
+	stClosedLoopControlSettingsWinch 		: ST_ClosedLoopControlSettings := (fMaxPositionError := 2E-3, fProportionalGain := 9.7, fIntegralGain := 6.5);
+	stOpenLoopControlSettingsCylinder 		: ST_OpenLoopControlSettings := (fBoreArea := 0.0033183, fAnnulusArea := 0.0023562, fMaxFlowCapacity := 75.0);
 	stClosedLoopControlSettingsCylinder 	: ST_ClosedLoopControlSettings := (fMaxPositionError := 2E-3, fProportionalGain := 14.6, fIntegralGain := 9.75);	
 END_STRUCT
 END_TYPE

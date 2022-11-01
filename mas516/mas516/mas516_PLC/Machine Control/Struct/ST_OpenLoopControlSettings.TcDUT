@@ -3,9 +3,9 @@
   <DUT Name="ST_OpenLoopControlSettings" Id="{d3ff122b-2654-4a8f-b887-57a35b2cf102}">
     <Declaration><![CDATA[TYPE ST_OpenLoopControlSettings :
 STRUCT
-	fBoreArea 			: LREAL := 0.0033183;
-	fAnnulusArea 		: LREAL := 0.0023562;
-	fMaxFlowCapacity 	: LREAL := 75; //[l/min]
+	fBoreArea 			: LREAL;
+	fAnnulusArea 		: LREAL;
+	fMaxFlowCapacity 	: LREAL; //[l/min]
 END_STRUCT
 END_TYPE
 ]]></Declaration>
