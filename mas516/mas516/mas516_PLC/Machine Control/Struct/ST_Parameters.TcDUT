@@ -15,8 +15,8 @@ STRUCT
 	stCylPistonPositionScaling 		: ST_AnalogInputScaling := (fMaxInputValue := 32295.0, fMinInputValue := 229.0, fMaxOutputValue := 0.5, fMinOutputValue := 0.0);
 	stFlowMeterInputScaling 		: ST_FlowMeterInputScaling := (fMaxInputValue := 32295.0, fMinInputValue := 0.0, fNeutralInputValue := 15450, fNeutralDeadband := 50.0, fMaxOutputValue := 150.0, fMinOutputValue := -150.0, fNeutralOutputValue := 0.0);
 	stJoystickInputScalingY 		: ST_JoystickInputScaling := (fMaxInputValue := 20504.0, fMinInputValue := 12160.0, fNeutralInputValue := 16640, fNeutralDeadband := 50.0, fMaxOutputValue := 1.0, fMinOutputValue := -1.0, fNeutralOutputValue := 0.0);
-	fEncoderOffset 					: LREAL := 17361.0; // Encoder value at zero (Cylinder out / second layaer)
-	fWinchDrumRadius				: LREAL := 0.0475; // [m]  (Cylinder out / second layaer)
+	fEncoderOffset 					: LREAL := 17574.8; // Encoder value at zero (Cylinder out / second layaer)
+	fWinchDrumScaling				: LREAL := 0.000744309; //  (empirical value - combined drum diameter and gearing)
 	fWinchSpeedReducerGain 			: LREAL := 0.2;
 	fCylSpeedReducerGain 			: LREAL := 0.2;
 	stWinchValveOutputGeneratorSettings  	: ST_ValveOutputGeneratorSettings := (fInitialValveOpening := 0.0, fValveOpeningSetPoint := 0.2, fTimeBeforeStarting_s := 3.0, fRampTime_s := 1.0, fHoldTime_s := 1.0, fWaitTime_s := 5.0);

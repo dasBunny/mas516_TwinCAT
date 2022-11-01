@@ -41,7 +41,7 @@ nRawInput := G_Inputs.nEncoderValue,
 fPosition => G_Sensors.fWinchEncoderPosition,
 );
 
-G_Sensors.fWinchWirePosition := F_DegToRad(fbWinchPosition.fPosition)*G_Parameters.stParam.fWinchDrumRadius;
+G_Sensors.fWinchWirePosition := fbWinchPosition.fPosition*G_Parameters.stParam.fWinchDrumScaling;
 
 fbCylPistonPosition(
 	nRawInput := G_Inputs.stPositionCylPiston.nValue,
