@@ -11,7 +11,7 @@ VAR
 	fCylControlSignalManual 			: LREAL;
 	fWinchControlSignalAuto 			: LREAL;
 	fCylControlSignalAuto				: LREAL;
-	fbAutomaticControlWinch 	:	FB_AutomaticControl;
+	fbAutomaticControlWinch 	:	FB_AutomaticControlWinch;
 	fbAutomaticControlCylinder 		:	FB_AutomaticControl;
 	fbModifyAutomaticControlSettingsWinch : FB_ModifyAutomaticControlSettings;
 	fbModifyAutomaticControlSettingsCylinder : FB_ModifyAutomaticControlSettings;

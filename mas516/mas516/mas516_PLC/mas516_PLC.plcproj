@@ -86,6 +86,9 @@
     <Compile Include="Machine Control\Function blocks\FB_AutomaticControl.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_AutomaticControlWinch.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Machine Control\Function blocks\FB_ClosedLoopControl.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +96,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_OpenLoopControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_OpenLoopControlWinch.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_ResetIntegralController.TcPOU">

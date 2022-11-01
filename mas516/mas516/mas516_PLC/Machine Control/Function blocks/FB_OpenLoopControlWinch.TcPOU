@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_OpenLoopControlWinch" Id="{99e0d1b8-ecff-45c8-8368-7e7da000f9da}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_OpenLoopControlWinch
+VAR_INPUT
+	bEnable		: BOOL;
+	fInput_ms	: LREAL;
+	fDisplacment_cc : LREAL;
+	fLin_m_ToRot_deg_Scaling : LREAL;
+	stOpenLoopControlSettings : ST_OpenLoopControlSettings;
+END_VAR
+VAR_OUTPUT
+	fNormalizedOutput: LREAL;
+END_VAR
+VAR
+	fFlowReference_lmin : LREAL;
+	fRads : LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fRads := (fInput_ms/fLin_m_ToRot_deg_Scaling)*3.14/180;
+fFlowReference_lmin := (fDisplacment_cc*(fRads/(2*3.14)*60))/1000;
+
+IF bEnable THEN 
+    fNormalizedOutput := (fFlowReference_lmin) / stOpenLoopControlSettings.fMaxFlowCapacity;
+ELSE 
+    fNormalizedOutput := 0.0;
+END_IF;
+
+IF fNormalizedOutput > 1.0 THEN 
+    fNormalizedOutput := 1.0;
+ELSIF fNormalizedOutput < -1.0 THEN 
+    fNormalizedOutput := -1.0;
+END_IF;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_OpenLoopControlWinch">
+      <LineId Id="88" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="26" Count="1" />
+      <LineId Id="30" Count="1" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="50" Count="0" />
+      <LineId Id="52" Count="1" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
