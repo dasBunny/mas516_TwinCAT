@@ -83,6 +83,9 @@
     <Compile Include="Inputs\Struct\ST_FlowMeterInputScaling.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_CylController.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Machine Control\Function blocks\FB_AutomaticControl.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -90,6 +93,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_ClosedLoopControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_FeedforwardWinch.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_MotionReferenceGenerator_limit.TcPOU">
@@ -115,6 +121,22 @@
     </Compile>
     <Compile Include="Machine Control\Function blocks\FB_ManualControl.TcPOU">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_FeedForwardCyl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\GVL_1247965427.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\FB_RampGen.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\Function blocks\WinchAngle.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Machine Control\G_HeightCorrection.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="Machine Control\G_Parameters.TcGVL">
       <SubType>Code</SubType>
@@ -251,6 +273,14 @@
     <None Include="mas516_PLC.tmc">
       <SubType>Content</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Machine Control\Function blocks\cylController.exp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Machine Control\Function blocks\rampGenerator.exp">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

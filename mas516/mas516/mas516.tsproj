@@ -165,6 +165,11 @@
 	</ImageDatas>
 	<Project ProjectGUID="{EF5F7013-5FCA-4B7E-840C-29FE4E77D3F9}" TargetNetId="5.80.90.242.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
 		<System>
+			<Licenses IgnoreProjectLicenses="true">
+				<Target>
+					<ManualSelect>{66689887-CCBD-452C-AC9A-039D997C6E66}</ManualSelect>
+				</Target>
+			</Licenses>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="10000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
@@ -173,7 +178,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{49FED982-BC8A-4BF0-A28B-25164CD2DF05}" Name="mas516_PLC" PrjFilePath="mas516_PLC\mas516_PLC.plcproj" TmcFilePath="mas516_PLC\mas516_PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{488158BE-37DB-0842-6A96-18722E2515FC}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="mas516_PLC\mas516_PLC.tmc" TmcHash="{F1CE0117-0DE8-87AF-E8E8-EC354C2106C5}">
 					<Name>mas516_PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">

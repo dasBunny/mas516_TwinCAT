@@ -12,7 +12,7 @@ END_VAR
 G_Outputs.stWinchValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode; 
 
 fbWinchValveOutput(
-	bEnable := G_Work.bWinchEnable OR G_Work.fWinchTime > 0.0,
+	bEnable := (G_Work.bWinchEnable OR G_Work.fWinchTime > 0.0) AND G_Hmi.bWinchEnable,
 	bDeadBandCompOn := G_Parameters.stParam.bDeadBandCompOn,
 	stValveDeadBand := G_Parameters.stParam.stWinchValveDeadBand,
 	fNormalizedInput := G_Work.fWinchControlInput,
@@ -23,7 +23,7 @@ fbWinchValveOutput(
 G_Outputs.stCylValveOutput.bEnable := G_Work.bManualMode OR G_Work.bAutoMode;
 
 fbCylValveOutput(
-	bEnable := G_Work.bCylEnable OR G_Work.fCylTime > 0.0,
+	bEnable := (G_Work.bCylEnable OR G_Work.fCylTime > 0.0) AND G_Hmi.bCylEnable,
 	bDeadBandCompOn := G_Parameters.stParam.bDeadBandCompOn,
 	stValveDeadBand := G_Parameters.stParam.stCylValveDeadBand,
 	fNormalizedInput := G_Work.fCylControlInput,

@@ -6,6 +6,16 @@
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"534"</v>
+              <v n="TextDefault">"Actual Height: %f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"501"</v>
+              <v n="TextDefault">"Actual Height: %f [m]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"920"</v>
               <v n="TextDefault">"Closed Loop Position Control ON"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -18,6 +28,11 @@
             <o>
               <v n="TextID">"824"</v>
               <v n="TextDefault">"Current Drum Pos: %f [m] "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"35"</v>
+              <v n="TextDefault">"Current Drum Pos: %f [°] "</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
@@ -56,6 +71,16 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"783"</v>
+              <v n="TextDefault">"Desired Height: %f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"51"</v>
+              <v n="TextDefault">"Desired Height: %f [m]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"854"</v>
               <v n="TextDefault">"Enable Cyl"</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -66,8 +91,33 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"995"</v>
+              <v n="TextDefault">"error: %f"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"246"</v>
+              <v n="TextDefault">"Error: %f [mm]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"928"</v>
+              <v n="TextDefault">"Error: %f [m]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"392"</v>
               <v n="TextDefault">"Feed Forward Tuning"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"423"</v>
+              <v n="TextDefault">"Height stabilisation"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"252"</v>
+              <v n="TextDefault">"Height: %f"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
@@ -141,6 +191,11 @@
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
+              <v n="TextID">"775"</v>
+              <v n="TextDefault">"Start Height: %f [m] "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"78"</v>
               <v n="TextDefault">"Start Position: %f [m] "</v>
               <l n="LanguageTexts" t="ArrayList" />
@@ -163,6 +218,21 @@
             <o>
               <v n="TextID">"349"</v>
               <v n="TextDefault">"Winch"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"599"</v>
+              <v n="TextDefault">"Zero offset: %f "</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"396"</v>
+              <v n="TextDefault">"Zero offset: %f [m]"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"522"</v>
+              <v n="TextDefault">"Zero offset: %f [m] "</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
           </l>

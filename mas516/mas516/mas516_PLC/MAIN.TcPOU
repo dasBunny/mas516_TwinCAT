@@ -7,11 +7,13 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[P_Inputs();
+P_MachineControl();
 P_Outputs();
-P_MachineControl();]]></ST>
+]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="15" Count="0" />
       <LineId Id="11" Count="0" />
       <LineId Id="7" Count="0" />
     </LineIds>

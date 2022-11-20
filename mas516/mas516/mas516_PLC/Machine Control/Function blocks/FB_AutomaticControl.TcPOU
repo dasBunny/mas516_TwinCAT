@@ -23,9 +23,9 @@ END_VAR
 VAR
 	fbClock : FB_Clock;	
 	fbMotionReferenceGenerator 		: FB_MotionReferenceGenerator_limit;	
-	fbVelocityFeedForwardControl 	: FB_OpenLoopControl;
+	fbVelocityFeedForwardControl 	: FB_FeedForwardCyl;
 	fbResetIntegralController 		: FB_ResetIntegralController; 
-	fbClosedLoopPositionControl 	: FB_ClosedLoopControl;
+	fbClosedLoopPositionControl 	: FB_CylController;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -43,18 +43,20 @@ fbMotionReferenceGenerator(
 );
 
 fbVelocityFeedForwardControl(
-	bEnable := stAutomaticControlSettings.bEnableVelocityFeedForwardControl,
-	stOpenLoopControlSettings := stOpenLoopControlSettings,
-	fInput_ms := fbMotionReferenceGenerator.fVelocityReference_ms
+	Enable := stAutomaticControlSettings.bEnableVelocityFeedForwardControl,
+	vRef_ms := fbMotionReferenceGenerator.fVelocityReference_ms,
+	maxFlow_lmin := stOpenLoopControlSettings.fMaxFlowCapacity,
+	cylOpeningForward := 0.00331,
+	cylOpeningBackward := 0.00236,
 );
 
-fbResetIntegralController(
+(* fbResetIntegralController(
 	stClosedLoopControlSettings := stClosedLoopControlSettings,
 	fPositionError_m := fbClosedLoopPositionControl.fPositionError,
 	fVelocityReference_ms := fbMotionReferenceGenerator.fVelocityReference_ms
-);
+);*)
 
-fbClosedLoopPositionControl(
+(*fbClosedLoopPositionControl(
 	bEnable := stAutomaticControlSettings.bEnableClosedLoopPositionControl,
 	stParam := stParam,
 	stClosedLoopControlSettings := stClosedLoopControlSettings,		
@@ -62,15 +64,30 @@ fbClosedLoopPositionControl(
 	bIntegralControllReset := fbResetIntegralController.bReset,
 	fInput_m := fbMotionReferenceGenerator.fPositionReference_m,
 	fFeedback_m := fPositionFeedback
-);
+);*)
+
 
 fVelocityReference_ms := fbMotionReferenceGenerator.fVelocityReference_ms;
 fPositionReference_m := fbMotionReferenceGenerator.fPositionReference_m;
 fTime := fbClock.fTime;
-fPositionError_mm := fbClosedLoopPositionControl.fPositionError*1E3;
+
+
+fbClosedLoopPositionControl(
+	EnablePFC := stAutomaticControlSettings.bEnableClosedLoopPositionControl,
+	PosRefm := fbMotionReferenceGenerator.fPositionReference_m,
+	VRefms := fbMotionReferenceGenerator.fVelocityReference_ms,
+	PosFbm := fPositionFeedback,
+	propGain := stClosedLoopControlSettings.fProportionalGain,
+	integralGain := stClosedLoopControlSettings.fIntegralGain,
+	maxPosError := stClosedLoopControlSettings.fMaxPositionError,
+	EnableIntegral := stAutomaticControlSettings.bEnableIntegralController,
+	ssMethodType := BOOL_TO_SINT(bEnable AND bStartMotion)
+);
+
+fPositionError_mm := fbClosedLoopPositionControl.xCylerrormm;
 
 IF bEnable THEN
-	fControlOutputNormalized := LIMIT(-1.0, (fbVelocityFeedForwardControl.fNormalizedOutput + fbClosedLoopPositionControl.fNormalizedOutput), 1.0);
+	fControlOutputNormalized := LIMIT(-1.0, (fbVelocityFeedForwardControl.FeedfowardOutput + fbClosedLoopPositionControl.SetValue), 1.0);
 ELSE
 	fControlOutputNormalized := 0.0;
 END_IF]]></ST>
@@ -87,8 +104,8 @@ END_IF]]></ST>
       <LineId Id="79" Count="0" />
       <LineId Id="76" Count="0" />
       <LineId Id="81" Count="0" />
-      <LineId Id="84" Count="0" />
       <LineId Id="88" Count="0" />
+      <LineId Id="340" Count="2" />
       <LineId Id="80" Count="0" />
       <LineId Id="54" Count="0" />
       <LineId Id="62" Count="3" />
@@ -96,17 +113,24 @@ END_IF]]></ST>
       <LineId Id="70" Count="0" />
       <LineId Id="69" Count="0" />
       <LineId Id="72" Count="0" />
-      <LineId Id="222" Count="0" />
-      <LineId Id="215" Count="0" />
+      <LineId Id="281" Count="0" />
+      <LineId Id="280" Count="0" />
       <LineId Id="96" Count="0" />
-      <LineId Id="94" Count="0" />
+      <LineId Id="279" Count="0" />
       <LineId Id="98" Count="0" />
       <LineId Id="165" Count="0" />
       <LineId Id="71" Count="0" />
+      <LineId Id="284" Count="0" />
       <LineId Id="247" Count="0" />
       <LineId Id="246" Count="0" />
       <LineId Id="248" Count="1" />
       <LineId Id="252" Count="0" />
+      <LineId Id="299" Count="6" />
+      <LineId Id="308" Count="1" />
+      <LineId Id="298" Count="0" />
+      <LineId Id="313" Count="0" />
+      <LineId Id="287" Count="0" />
+      <LineId Id="310" Count="1" />
       <LineId Id="139" Count="0" />
       <LineId Id="138" Count="0" />
       <LineId Id="141" Count="0" />
