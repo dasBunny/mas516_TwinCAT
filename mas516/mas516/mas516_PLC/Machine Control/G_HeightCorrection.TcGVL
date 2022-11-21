@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <GVL Name="G_HeightCorrection" Id="{570bc1fa-d823-42f1-b5de-c19e1ec1e040}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	xCorrectHeight : BOOL;
+	rZeroOffset : REAL;
+	rActual: REAL;
+	rDesiredHeight: REAL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

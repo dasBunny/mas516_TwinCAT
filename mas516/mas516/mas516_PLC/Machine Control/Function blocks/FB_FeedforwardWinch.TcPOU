@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_FeedforwardWinch" Id="{33c27b48-71a3-4f77-967b-ab3f6d50d321}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_FeedforwardWinch
+VAR_INPUT
+	bEnable		: BOOL;
+	fInput_ms	: LREAL;
+	fDisplacment_cc : LREAL;
+	rCircumference : REAL;
+	stOpenLoopControlSettings : ST_OpenLoopControlSettings;
+	rTransmission : REAL;
+END_VAR
+VAR_OUTPUT
+	fNormalizedOutput: LREAL;
+END_VAR
+VAR
+	fFlowReference_lmin : LREAL;
+	fRads : LREAL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fRads := fInput_ms * 3.14 * 2 * rTransmission / (rCircumference);
+fFlowReference_lmin := (fDisplacment_cc*1E-5*fRads/(2*3.14))*60000;
+
+IF bEnable THEN 
+    fNormalizedOutput := (fFlowReference_lmin) / stOpenLoopControlSettings.fMaxFlowCapacity;
+ELSE 
+    fNormalizedOutput := 0.0;
+END_IF;
+
+IF fNormalizedOutput > 1.0 THEN
+    fNormalizedOutput := 1.0;
+ELSIF fNormalizedOutput < -1.0 THEN 
+    fNormalizedOutput := -1.0;
+END_IF;]]></ST>
+    </Implementation>
+    <LineIds Name="FB_FeedforwardWinch">
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="11" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

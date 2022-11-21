@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="WinchAngle" Id="{ee22bece-7216-450d-a6dd-8dac20b37535}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK WinchAngle
+VAR_INPUT
+	xCyl: LREAL;
+	winchAngleRad: LREAL;
+	hZero: LREAL;
+	wheelHeight: LREAL;
+	totalDistance: LREAL;
+	spoolRadius: LREAL;
+END_VAR
+VAR_OUTPUT
+	ropeLength: LREAL;
+	height: LREAL;
+END_VAR
+VAR
+	rtb_Sqrt: LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(* Outputs for Atomic SubSystem: '<Root>/WinchAngle' *)
+(* Sum: '<S1>/Sum1' *)
+rtb_Sqrt := totalDistance - xCyl;
+(* Product: '<S1>/Product' *)
+ropeLength := winchAngleRad * spoolRadius;
+(* Outport: '<Root>/height' incorporates:
+ *  Math: '<S1>/Math Function'
+ *  Math: '<S1>/Math Function1'
+ *  Sqrt: '<S1>/Sqrt'
+ *  Sum: '<S1>/Sum'
+ *  Sum: '<S1>/Sum2' *)
+height := (ropeLength + SQRT((wheelHeight * wheelHeight) + (rtb_Sqrt * rtb_Sqrt))) - hZero;
+(* End of Outputs for SubSystem: '<Root>/WinchAngle' *)
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="WinchAngle">
+      <LineId Id="3" Count="14" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

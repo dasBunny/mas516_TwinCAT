@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FB_FeedForwardCyl" Id="{4357de09-83d8-4e99-a3a2-34aeb489ffaf}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_FeedForwardCyl
+VAR_INPUT
+	Enable: BOOL;
+	vRef_ms: LREAL;
+	maxFlow_lmin: LREAL;
+	cylOpeningForward: LREAL;
+	cylOpeningBackward: LREAL;
+END_VAR
+VAR_OUTPUT
+	FeedfowardOutput: LREAL;
+END_VAR
+VAR
+	rtb_Switch: LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(* Outputs for Atomic SubSystem: '<Root>/FeedForward' *)
+(* Switch: '<S1>/Switch1' *)
+
+IF Enable THEN 
+    (* Switch: '<S1>/Switch' incorporates:
+     *  Constant: '<S1>/Constant'
+     *  Product: '<S1>/Product1'
+     *  Product: '<S1>/Product2'
+     *  RelationalOperator: '<S1>/Relational Operator' *)
+
+    IF vRef_ms >= 0.0 THEN 
+        rtb_Switch := cylOpeningForward * vRef_ms;
+    ELSE 
+        rtb_Switch := vRef_ms * cylOpeningBackward;
+    END_IF;
+
+    (* End of Switch: '<S1>/Switch' *)
+    
+
+    (* Outport: '<Root>/FeedfowardOutput' incorporates:
+     *  Constant: '<S1>/Constant2'
+     *  Product: '<S1>/Divide'
+     *  Product: '<S1>/Product' *)
+    FeedfowardOutput := (60000.0 * rtb_Switch) / maxFlow_lmin;
+ELSE 
+    (* Outport: '<Root>/FeedfowardOutput' incorporates:
+     *  Constant: '<S1>/Constant1' *)
+    FeedfowardOutput := 0.0;
+END_IF;
+
+(* End of Switch: '<S1>/Switch1' *)
+(* End of Outputs for SubSystem: '<Root>/FeedForward' *)
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="FB_FeedForwardCyl">
+      <LineId Id="3" Count="33" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
